@@ -57,6 +57,10 @@ public class DriverHomeActivity extends AppCompatActivity implements ComplaintDr
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_driver_home);
 
+
+        getSupportActionBar().hide();
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         drivercomplaintRV = findViewById(R.id.drivercomplaint_RV);
         complaintArrayList = new ArrayList<>();
         bottomSheetRL = findViewById(R.id.idRLbottomSheet_driver);

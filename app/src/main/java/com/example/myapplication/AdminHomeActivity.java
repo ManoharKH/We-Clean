@@ -52,6 +52,9 @@ public class AdminHomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_home);
 
+        getSupportActionBar().hide();
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         bottomNavigation = findViewById(R.id.bottom_nav);
         bottomNavigation.add(new MeowBottomNavigation.Model(1,R.drawable.ic_home));
         bottomNavigation.add(new MeowBottomNavigation.Model(2,R.drawable.ic_pending));

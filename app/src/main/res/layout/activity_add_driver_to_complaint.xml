@@ -5,47 +5,86 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="10dp"
-    android:layout_margin="10dp"
-    android:gravity="center"
+    android:background="@color/backgrnd"
     tools:context=".AddDriverToComplaintActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <include
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="Select Driver ID" />
+        android:layout_width="match_parent"
+        layout="@layout/adding_driver"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_120sdp"
+        android:textStyle="bold"
+        android:text="Select Driver ID"
+        android:textSize="@dimen/_20sdp"
+        android:fontFamily="@font/chau_philomene_one"
+        android:textColor="@color/prim_text"
+        android:gravity="center"/>
+
     <Spinner
+        android:id="@+id/spinner_drivername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:id="@+id/spinner_drivername"/>
+        android:minHeight="48dp" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Driver Name : "
         android:layout_margin="10dp"
-        android:id="@+id/txt_drivername"/>
+        android:id="@+id/txt_drivername"
+        android:fontFamily="@font/chau_philomene_one"
+        android:textColor="@color/prim_text"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="italic"
+        />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Mobile Number : "
         android:layout_margin="10dp"
-        android:id="@+id/txt_mobilenumber"/>
+        android:id="@+id/txt_mobilenumber"
+        android:fontFamily="@font/chau_philomene_one"
+        android:textColor="@color/prim_text"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="italic"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Active Complaints : "
         android:layout_margin="10dp"
-        android:id="@+id/txt_activeComplaint"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/txt_activeComplaint"
+        android:fontFamily="@font/chau_philomene_one"
+        android:textColor="@color/prim_text"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="italic"/>
+
+    <soup.neumorphism.NeumorphButton
         android:id="@+id/btn_addDriver"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:fontFamily="@font/baloo"
         android:text="Add Driver"
-        android:layout_margin="10dp"
-        android:textAllCaps="false"/>
+
+        android:textAllCaps="false"
+        android:textColor="@color/prim_text"
+        android:textSize="@dimen/_20sdp"
+        app:neumorph_shadowColorDark="@color/dark_shadow"
+        app:neumorph_shadowColorLight="@color/light_shadow"
+        app:neumorph_shadowElevation="5dp"
+        style="@style/ShapeAppearance.Neumorph.Button"
+        app:neumorph_shapeType="basin"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:paddingTop="@dimen/_15sdp"
+
+        />
 
 </LinearLayout>

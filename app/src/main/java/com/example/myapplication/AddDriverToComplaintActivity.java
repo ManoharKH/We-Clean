@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -45,6 +46,9 @@ public class AddDriverToComplaintActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_driver_to_complaint);
 
+
+        getSupportActionBar().hide();
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         txtdrivername = (TextView) findViewById(R.id.txt_drivername);
         txtmobilenumber = (TextView) findViewById(R.id.txt_mobilenumber);
         txtactivecomplaint = (TextView) findViewById(R.id.txt_activeComplaint);

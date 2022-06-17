@@ -46,6 +46,8 @@ public class CitizenHomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_citizen_home);
 
+        getSupportActionBar().hide();
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         bottomNavigation = findViewById(R.id.bottom_nav);
         drawerLayout = findViewById(R.id.drawer_layout);

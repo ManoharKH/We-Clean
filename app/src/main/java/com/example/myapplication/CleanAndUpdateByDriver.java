@@ -32,6 +32,7 @@ import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.TextView;
@@ -110,6 +111,9 @@ public class CleanAndUpdateByDriver extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clean_and_update_by_driver);
+
+        getSupportActionBar().hide();
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         txtlattitude = (TextView) findViewById(R.id.txt_lattitute);
         txtlongitude = (TextView) findViewById(R.id.txt_longitude);
@@ -296,7 +300,7 @@ public class CleanAndUpdateByDriver extends AppCompatActivity {
                 (grantResults[0] + grantResults[1] == PackageManager.PERMISSION_GRANTED)) {
             getCurrentLocation();
         } else {
-            Toast.makeText(getApplicationContext(), "Permission denied.", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(), "Permission denied.", Toast.LENGTH_SHORT).show();
         }
     }
     //
