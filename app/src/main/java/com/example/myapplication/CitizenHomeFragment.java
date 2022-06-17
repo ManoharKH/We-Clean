@@ -95,6 +95,12 @@ public class CitizenHomeFragment extends Fragment {
 
 
 
+        raiseComp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
         yel.setTranslationX(800);
         blck.setTranslationX(800);
