@@ -101,7 +101,7 @@ public class AdminHomeActivity extends AppCompatActivity {
             }
         });
 
-//        fragmentID = getIntent().getExtras().getInt("fragmentId");
+        fragmentID = getIntent().getExtras().getInt("fragmentId");
         bottomNavigation.show(fragmentID,true);
 
         bottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {

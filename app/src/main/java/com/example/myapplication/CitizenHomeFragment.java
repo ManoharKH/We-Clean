@@ -41,6 +41,7 @@ public class CitizenHomeFragment extends Fragment {
     TextView raisec, compraise, myc, compmy;
     RelativeLayout yel, blck;
     ImageView yimg, bimg;
+    int fragmentID = 3;
 
 
     public CitizenHomeFragment() {
@@ -98,7 +99,9 @@ public class CitizenHomeFragment extends Fragment {
         raiseComp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent it = new Intent(getContext(),CitizenHomeActivity.class);
+                it.putExtra("fragmentId",fragmentID);
+                startActivity(it);
             }
         });
 

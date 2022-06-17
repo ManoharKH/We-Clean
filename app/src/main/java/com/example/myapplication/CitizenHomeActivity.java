@@ -37,6 +37,8 @@ public class CitizenHomeActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
     ImageView menuIcon;
+    int fragmentID = 1;
+
 
 //    Toolbar toolbar;
 
@@ -106,7 +108,8 @@ public class CitizenHomeActivity extends AppCompatActivity {
             }
         });
 
-        bottomNavigation.show(1, true);
+        fragmentID = getIntent().getExtras().getInt("fragmentId");
+        bottomNavigation.show(fragmentID, true);
 
         bottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
             @Override
