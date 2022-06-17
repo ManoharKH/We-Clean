@@ -1,13 +1,10 @@
 package com.example.myapplication;
 
-import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 
 
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -17,9 +14,16 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toolbar;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.HashMap;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -37,8 +41,10 @@ public class CitizenHomeFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     private float v=0;
-    Button raiseComp, myComp;
-    TextView raisec, compraise, myc, compmy;
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference databaseReference;
+    Button btnraiseComplaint, btnmyComplaint;
+    TextView raisec, compraise, myc, compmy,txtusername;
     RelativeLayout yel, blck;
     ImageView yimg, bimg;
     int fragmentID = 3;
@@ -83,20 +89,20 @@ public class CitizenHomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_citizen_home, container, false);
 
-        raiseComp = view.findViewById(R.id.raisecomplaint);
-        myComp = view.findViewById(R.id.mycomplaints);
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        btnraiseComplaint = view.findViewById(R.id.raisecomplaint);
+        btnmyComplaint = view.findViewById(R.id.mycomplaints);
         raisec = view.findViewById(R.id.raisew);
         compraise = view.findViewById(R.id.compw);
         myc = view.findViewById(R.id.myw);
         compmy = view.findViewById(R.id.compww);
+        txtusername = view.findViewById(R.id.txt_username);
         yel = view.findViewById(R.id.yclr);
         blck = view.findViewById(R.id.bclr);
         yimg = view.findViewById(R.id.rc_img);
         bimg = view.findViewById(R.id.mc_img);
 
-
-
-        raiseComp.setOnClickListener(new View.OnClickListener() {
+        btnraiseComplaint.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent it = new Intent(getContext(),CitizenHomeActivity.class);
@@ -105,14 +111,16 @@ public class CitizenHomeFragment extends Fragment {
             }
         });
 
+        getUsername();
+
         yel.setTranslationX(800);
         blck.setTranslationX(800);
         raisec.setTranslationX(800);
         compraise.setTranslationX(800);
-        raiseComp.setTranslationX(800);
+        btnraiseComplaint.setTranslationX(800);
         myc.setTranslationX(800);
         compmy.setTranslationX(800);
-        myComp.setTranslationX(800);
+        btnmyComplaint.setTranslationX(800);
         yimg.setTranslationX(800);
         bimg.setTranslationX(800);
 
@@ -120,22 +128,22 @@ public class CitizenHomeFragment extends Fragment {
         blck.setAlpha(v);
         raisec.setAlpha(v);
         compraise.setAlpha(v);
-        raiseComp.setAlpha(v);
+        btnraiseComplaint.setAlpha(v);
         myc.setAlpha(v);
         compmy.setAlpha(v);
-        myComp.setAlpha(v);
+        btnmyComplaint.setAlpha(v);
         yimg.setAlpha(v);
         bimg.setAlpha(v);
 
         yel.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(300).start();
         raisec.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(300).start();
         compraise.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(300).start();
-        raiseComp.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(300).start();
+        btnraiseComplaint.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(300).start();
         yimg.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(300).start();
         blck.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(500).start();
         myc.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(500).start();
         compmy.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(500).start();
-        myComp.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(500).start();
+        btnmyComplaint.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(500).start();
         bimg.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(500).start();
 
 
@@ -149,9 +157,31 @@ public class CitizenHomeFragment extends Fragment {
 
     }
 
+    private void getUsername() {
+        databaseReference = firebaseDatabase.getReference("Users");
 
+        String currentUserID = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                for (DataSnapshot user : snapshot.getChildren()){
+//                    String uid = user.getKey();
+//                    if(uid.equals(currentUserID)){
+//                        txtusername.setText(user.child("username").getValue(String.class));
+//                    }
+//                }
 
+                DataSnapshot user = snapshot.child(currentUserID);
+                txtusername.setText(user.child("username").getValue(String.class));
 
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
 
 
 }
