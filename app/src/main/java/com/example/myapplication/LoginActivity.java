@@ -165,6 +165,7 @@ public class LoginActivity extends AppCompatActivity {
                         if(usertype.equals("Citizen")){
                             Toast.makeText(LoginActivity.this,"Citizen",Toast.LENGTH_SHORT).show();
                             Intent it = new Intent(LoginActivity.this,CitizenHomeActivity.class);
+                            it.putExtra("fragmentId",1);
                             startActivity(it);
                             finish();
 

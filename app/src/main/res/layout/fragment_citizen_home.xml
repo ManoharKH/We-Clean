@@ -35,7 +35,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="304dp">
+                    android:layout_height="250dp">
 
                     <include
                         android:id="@+id/toolbar"
@@ -44,25 +44,22 @@
                         android:layout_height="wrap_content" />
 
 
-
-
-
                     <ImageView
                         android:id="@+id/imageView4"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
                         android:layout_alignParentEnd="true"
-                        android:layout_marginTop="104dp"
+                        android:layout_marginTop="80dp"
                         android:layout_marginEnd="26dp"
                         android:src="@drawable/wc_logo" />
 
                     <TextView
                         android:id="@+id/textView"
-                        android:layout_width="215dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="115dp"
+                        android:layout_marginTop="75dp"
                         android:fontFamily="@font/baloo"
-                        android:paddingStart="40dp"
+                        android:paddingStart="20dp"
                         android:text="@string/weclean"
                         android:textColor="@color/black"
                         android:textSize="30sp" />
@@ -74,7 +71,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/textView"
                         android:layout_marginTop="5dp"
-                        android:paddingLeft="66dp"
+                        android:paddingStart="20dp"
                         android:text="Hello!"
                         android:textColor="@color/black"
                         android:textSize="18sp" />
@@ -91,7 +88,7 @@
                         android:textSize="18sp" />
 
                     <TextView
-                        android:id="@+id/un"
+                        android:id="@+id/txt_username"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/textView"
@@ -132,7 +129,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/baloo"
-                            android:padding="25dp"
+                            android:padding="20dp"
                             android:text="Raise"
                             android:textColor="@color/black"
                             android:textSize="30sp" />
@@ -143,7 +140,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="30dp"
                             android:fontFamily="@font/baloo"
-                            android:padding="25dp"
+                            android:padding="20dp"
                             android:text="Complaint"
                             android:textColor="@color/black"
                             android:textSize="30sp" />
@@ -154,7 +151,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:background="#00000000"
-                            android:padding="20dp"
+                            android:padding="21dp"
                             android:text="Explore Here"
                             android:textColor="@color/black" />
 
@@ -187,7 +184,7 @@
                         android:layout_width="139dp"
                         android:layout_height="match_parent"
                         android:layout_alignParentRight="true"
-                        android:layout_marginRight="1dp"
+                        android:layout_marginRight="5dp"
                         android:src="@drawable/mc" />
 
                     <TextView
@@ -196,7 +193,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:fontFamily="@font/baloo"
-                        android:padding="25dp"
+                        android:padding="20dp"
                         android:text="My"
                         android:textColor="@color/white"
                         android:textSize="30sp" />
@@ -208,7 +205,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_marginTop="30dp"
                         android:fontFamily="@font/baloo"
-                        android:padding="25dp"
+                        android:padding="20dp"
                         android:text="Complaints"
                         android:textColor="@color/white"
                         android:textSize="30sp" />
@@ -220,7 +217,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentBottom="true"
                         android:background="#00000000"
-                        android:padding="20dp"
+                        android:padding="21dp"
                         android:text="@string/view_all"
                         android:textColor="@color/white" />
 
