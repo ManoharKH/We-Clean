@@ -195,6 +195,7 @@ public class CitizenHomeActivity extends AppCompatActivity {
                         mAuth.signOut();
                         Intent i = new Intent(CitizenHomeActivity.this, LoginActivity.class);
                         startActivity(i);
+                        finish();
                         return true;
 
                     case R.id.nav_rate:

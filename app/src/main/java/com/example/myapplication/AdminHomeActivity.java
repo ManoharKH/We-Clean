@@ -180,7 +180,7 @@ public class AdminHomeActivity extends AppCompatActivity {
                         mAuth.signOut();
                         Intent i = new Intent(AdminHomeActivity.this,LoginActivity.class);
                         startActivity(i);
-
+                        finish();
                         return true;
 
                     case R.id.nav_rate:
