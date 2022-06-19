@@ -60,7 +60,7 @@
     </style>
 
     <style name="Corner">
-        <item name="cornerSize">20%</item>
+        <item name="cornerSize">10%</item>
     </style>
 
 

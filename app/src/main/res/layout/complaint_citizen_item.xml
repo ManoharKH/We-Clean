@@ -24,8 +24,8 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="5dp"
             android:drawableStart="@drawable/ic_location"
-            android:textAlignment="center"
             android:text="Address :"
+            android:textAlignment="center"
             android:textColor="@color/white"
             android:textStyle="bold" />
 

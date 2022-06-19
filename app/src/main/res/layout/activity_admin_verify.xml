@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-
     android:background="@color/backgrnd"
     tools:context=".AdminVerifyActivity">
 
@@ -14,65 +13,93 @@
         android:layout_height="wrap_content"
         layout="@layout/verify"/>
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txt_address"
-        android:text="Address : "
-        android:textStyle="italic"
-        android:fontFamily="@font/chau_philomene_one"
-        android:textColor="@color/prim_text"
-        android:layout_marginTop="10dp"
-        android:paddingLeft="@dimen/_10sdp"
-        />
+        android:orientation="horizontal">
 
-    <TextView
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_tvaddress"
+            android:text="Address : "
+            android:textStyle="italic"
+            android:fontFamily="@font/chau_philomene_one"
+            android:textColor="@color/prim_text"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="@dimen/_10sdp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_address"
+            android:textStyle="italic"
+            android:fontFamily="@font/chau_philomene_one"
+            android:textColor="@color/prim_text"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="@dimen/_10sdp"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txt_citizenlatitude"
-        android:text="Citizen Latitude : "
-        android:textStyle="italic"
-        android:fontFamily="@font/chau_philomene_one"
-        android:textColor="@color/prim_text"
-        android:paddingLeft="@dimen/_10sdp"/>
+        android:orientation="horizontal">
 
-    <TextView
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Citizen Latitude : "
+            android:textStyle="italic"
+            android:fontFamily="@font/chau_philomene_one"
+            android:textColor="@color/prim_text"
+            android:paddingLeft="@dimen/_10sdp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_citizenlatitude"
+            android:textStyle="italic"
+            android:fontFamily="@font/chau_philomene_one"
+            android:textColor="@color/prim_text"
+            android:paddingLeft="@dimen/_10sdp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txt_citizenlongitude"
-        android:text="Citizen Longitude : "
-        android:textStyle="italic"
-        android:fontFamily="@font/chau_philomene_one"
-        android:textColor="@color/prim_text"
-        android:paddingLeft="@dimen/_10sdp"/>
+        android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txt_driverlatitude"
-        android:text="Driver Latitude : "
-        android:textStyle="italic"
-        android:fontFamily="@font/chau_philomene_one"
-        android:textColor="@color/prim_text"
-        android:paddingLeft="@dimen/_10sdp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Citizen Longitude : "
+            android:textStyle="italic"
+            android:fontFamily="@font/chau_philomene_one"
+            android:textColor="@color/prim_text"
+            android:paddingLeft="@dimen/_10sdp"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txt_driverlongitude"
-        android:text="Driver Longitude : "
-        android:textStyle="italic"
-        android:fontFamily="@font/chau_philomene_one"
-        android:paddingLeft="@dimen/_10sdp"
-        android:textColor="@color/prim_text"
-        />
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_citizenlongitude"
+            android:textStyle="italic"
+            android:fontFamily="@font/chau_philomene_one"
+            android:textColor="@color/prim_text"
+            android:paddingLeft="@dimen/_10sdp"/>
+    </LinearLayout>
 
 
     <TextView
+        android:id="@+id/txt_tvcitizenImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Then :"
+        android:text="Citizen"
+        android:visibility="gone"
         android:textStyle="italic"
         android:fontFamily="@font/chau_philomene_one"
         android:textColor="@color/prim_text"
@@ -80,31 +107,34 @@
         android:textSize="@dimen/_18sdp"
         android:layout_marginTop="@dimen/_10sdp"/>
 
-
-
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageView"
         android:layout_width="200dp"
         android:layout_height="200dp"
+        android:visibility="gone"
         app:srcCompat="@drawable/ic_launcher_background"
         android:layout_marginStart="@dimen/_60sdp"
         app:shapeAppearanceOverlay="@style/Corner"/>
 
     <TextView
+        android:id="@+id/txt_tvdriverImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Now :"
+        android:text="Driver"
+        android:visibility="gone"
         android:textStyle="italic"
         android:fontFamily="@font/chau_philomene_one"
         android:textColor="@color/prim_text"
         android:layout_marginStart="@dimen/_20sdp"
         android:textSize="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_10sdp"
         />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageView1"
         android:layout_width="200dp"
         android:layout_height="200dp"
+        android:visibility="gone"
         tools:srcCompat="@tools:sample/avatars"
         android:layout_marginStart="@dimen/_60sdp"
         app:shapeAppearanceOverlay="@style/Corner"/>
