@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -44,6 +45,11 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        //ProgressDialog for loading
+        final ProgressDialog loading = new ProgressDialog(this);
+        loading.setTitle("Loading");
+        loading.setMessage("Please wait...");
 
         getSupportActionBar().hide();
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -96,6 +102,7 @@ public class LoginActivity extends AppCompatActivity {
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                loading.show();
                 String username = txtusername.getText().toString().trim();
                 String password = txtpassword.getText().toString().trim();
 
@@ -104,18 +111,19 @@ public class LoginActivity extends AppCompatActivity {
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
-
+                                    //loading.hide();
                                     if (task.isSuccessful()){
                                         String uid = task.getResult().getUser().getUid();
 
                                         checkUserCategory(uid);
-
+                                        //loading.hide();
                                     }
 
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
+                            loading.hide();
                             if (e instanceof FirebaseAuthInvalidUserException) {
                                 Toast.makeText(LoginActivity.this,"Incorrect Email Address",Toast.LENGTH_SHORT).show();
                                 txtusername.setError("Invalid Email");

@@ -102,8 +102,9 @@ public class CleanAndUpdateByDriver extends AppCompatActivity {
     public static final int CAMERA_REQUEST_CODE = 202;
     //ImageView selectedImage;
     String currentPhotoPath;
+    ProgressDialog uploading;
     StorageReference storageReference;
-    ProgressDialog progressDialog ;
+
 
     //
 
@@ -111,6 +112,10 @@ public class CleanAndUpdateByDriver extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clean_and_update_by_driver);
+
+        uploading = new ProgressDialog(this);
+        uploading.setTitle("Uploading");
+        uploading.setMessage("Please wait...");
 
         getSupportActionBar().hide();
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -395,7 +400,6 @@ public class CleanAndUpdateByDriver extends AppCompatActivity {
                 if(ppp==1)
                 {
                     //btnsubmit.setEnabled(true);
-
                     Toast.makeText(getApplicationContext(), "Garbage free", Toast.LENGTH_SHORT).show();
 
                     File f = new File(currentPhotoPath);
@@ -504,10 +508,11 @@ public class CleanAndUpdateByDriver extends AppCompatActivity {
         //Extra
         //progressDialog.setTitle("Uploading image...");
         //progressDialog.show();
+        uploading.show();
         driverImageFilename = name;
         try {
             //progressDialog.setTitle("Image is Uploading...");
-            //progressDialog.show();
+
             Toast.makeText(getApplicationContext(), "Uploading.....", Toast.LENGTH_LONG).show();
             final StorageReference image = storageReference.child("driver/" + name);
             image.putFile(contentUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -518,6 +523,7 @@ public class CleanAndUpdateByDriver extends AppCompatActivity {
                         public void onSuccess(Uri uri) {
                             Log.d("tag", "onSuccess: Uploaded Image URl is " + uri.toString());
                             //progressDialog.dismiss();
+                            uploading.hide();
 
                             adminStatus = "Cleaning Done";
                             Map<String, Object> map = new HashMap<>();
@@ -550,7 +556,7 @@ public class CleanAndUpdateByDriver extends AppCompatActivity {
                             finish();
                             //Extra
                             //progressDialog.dismiss();
-
+                            uploading.hide();
                         }
                     });
 
@@ -564,6 +570,7 @@ public class CleanAndUpdateByDriver extends AppCompatActivity {
                     startActivity(it);
                     finish();
                     //progressDialog.dismiss();
+                    uploading.hide();
                 }
             });
         } catch (Exception e) {
