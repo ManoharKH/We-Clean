@@ -122,7 +122,7 @@ public class CleanAndUpdateByDriver extends AppCompatActivity {
         btnsubmit = (Button) findViewById(R.id.btn_submit);
         btnmap = (Button) findViewById(R.id.btn_maps);
 
-        btnmap.setEnabled(false);
+        //btnmap.setEnabled(false);
         //
         PREMISSIONS = new String[] {
                 Manifest.permission.CAMERA,
@@ -157,6 +157,7 @@ public class CleanAndUpdateByDriver extends AppCompatActivity {
                 }
             }
         });
+        /*
         btnmap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -171,6 +172,26 @@ public class CleanAndUpdateByDriver extends AppCompatActivity {
                 }
             }
         });
+         */
+        btnmap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Get source and destination
+                //check condition
+                String driver_lat = txtlattitude.getText().toString();
+                String driver_long = txtlongitude.getText().toString();
+                String driver_add = txtaddress.getText().toString();
+
+                if(driver_lat.isEmpty() || driver_long.isEmpty() || driver_add.isEmpty()){
+                    Toast.makeText(CleanAndUpdateByDriver.this,"Get current location first",Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    //Toast.makeText(getApplicationContext(), sDestination, Toast.LENGTH_SHORT).show();
+                    openmap(sSource,sDestination);
+                }
+            }
+        });
+
 
         if(driverComplaint != null){
             address = driverComplaint.getAddress();
@@ -243,7 +264,12 @@ public class CleanAndUpdateByDriver extends AppCompatActivity {
         try{
             //When google map is installed
             //Initilize uri
-            Uri uri = Uri.parse("https://www.google.co.in/maps/dir/" + sSource + "/" + sDestination);
+            //Uri uri = Uri.parse("https://www.google.co.in/maps/dir/" + sSource + "/" + sDestination);
+            //Obtaining map direction from your location to destination
+            Uri uri = Uri.parse("https://www.google.co.in/maps/dir/" +""+ "/" + sDestination);
+            //float laat=Float.valueOf(latitude);
+            //float loog=Float.valueOf(longitude);
+            //Uri uri = Uri.parse("geo:"+laat+","+loog+"?q"+Uri.parse("geo:"+laat+","+loog));
             //Initilize intent with action view
             Intent imap = new Intent(Intent.ACTION_VIEW,uri);
             //Set package
@@ -551,7 +577,7 @@ public class CleanAndUpdateByDriver extends AppCompatActivity {
     @SuppressLint("MissingPermission")
     private void getCurrentLocation()  {
 
-        btnmap.setEnabled(true);
+        //btnmap.setEnabled(true);
 
         LocationManager locationManager = (LocationManager) getSystemService(
                 Context.LOCATION_SERVICE
