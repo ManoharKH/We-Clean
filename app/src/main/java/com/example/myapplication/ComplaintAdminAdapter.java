@@ -34,7 +34,7 @@ public class ComplaintAdminAdapter extends RecyclerView.Adapter<ComplaintAdminAd
     @Override
     public void onBindViewHolder(@NonNull ComplaintAdminAdapter.ViewHolder holder, int position) {
         Complaint complaint = complaintArrayList.get(holder.getAdapterPosition());
-        holder.txtaddress.setText("Address : " + complaint.getAddress());
+        holder.txtaddress.setText("" + complaint.getAddress());
         holder.txtlatitude.setText("Latitude - " + complaint.getLattitude());
         holder.txtlongitude.setText("Longitude - " + complaint.getLongitude());
         holder.txtadminStatus.setText("Status : " + complaint.getAdminStatus());

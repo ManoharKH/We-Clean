@@ -4,10 +4,10 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_gravity="center"
-    android:layout_margin="10dp"
+    android:layout_marginHorizontal="15dp"
+    android:layout_marginVertical="8dp"
     app:cardCornerRadius="15dp"
-    app:cardElevation="5dp"
-    android:layout_marginRight="10dp">
+    app:cardElevation="5dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -19,14 +19,26 @@
         android:paddingRight="10dp">
 
         <TextView
-            android:id="@+id/txt_complaintaddress"
-            android:layout_width="match_parent"
+            android:id="@+id/txt_tvcomplaintaddress"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="5dp"
             android:drawableStart="@drawable/ic_location"
+            android:textAlignment="center"
             android:text="Address :"
             android:textColor="@color/white"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_complaintaddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_toRightOf="@id/txt_tvcomplaintaddress"
+            android:layout_marginLeft="5dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/txt_latitute"
