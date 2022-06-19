@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/activity_citizen_home.xml" value="0.253125" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/activity_piechart.xml" value="0.253125" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/fragment_citizen_home.xml" value="0.22685185185185186" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/fragment_citizen_mycomplaint.xml" value="0.253125" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/pie_tool.xml" value="0.253125" />
         <entry key="..\:/college/Main Project/Final code/MyApplication1_naga2/MyApplication1/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.14635416666666667" />
         <entry key="..\:/college/Main Project/Final code/MyApplication1_naga2/MyApplication1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.14635416666666667" />
         <entry key="..\:/college/Main Project/Final code/MyApplication1_naga2/MyApplication1/app/src/main/res/font/chau_philomene_one.xml" value="0.16041666666666668" />
