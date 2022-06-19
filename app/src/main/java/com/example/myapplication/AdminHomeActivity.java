@@ -144,7 +144,7 @@ public class AdminHomeActivity extends AppCompatActivity {
                 Fragment fragment = null;
                 switch (item.getItemId()){
                     case R.id.nav_home:
-                        fragment =new CitizenHomeFragment();
+                        fragment =new AdminHomeFragment();
                         loadFragment(fragment);
                         break;
 

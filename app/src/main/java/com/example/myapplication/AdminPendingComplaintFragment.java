@@ -186,7 +186,6 @@ public class AdminPendingComplaintFragment extends Fragment implements Complaint
                     Intent it = new Intent(getContext(),AdminVerifyActivity.class);
                     it.putExtra("complaints", complaint);
                     startActivity(it);
-                    getActivity().finish();
                 }
             }
         });

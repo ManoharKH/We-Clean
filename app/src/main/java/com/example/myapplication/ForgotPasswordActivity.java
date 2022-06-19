@@ -54,12 +54,12 @@ public class ForgotPasswordActivity extends AppCompatActivity {
                 if(email.isEmpty()){
                     txtemailAddress.setError("Please enter email");
                     txtemailAddress.requestFocus();
-                }
-                if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+                }else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
                     txtemailAddress.setError("Enter valid email");
                     txtemailAddress.requestFocus();
+                }else{
+                    resetPassword(email);
                 }
-                resetPassword(email);
             }
         });
     }

@@ -33,7 +33,7 @@ public class ComplaintDriverAdapter extends RecyclerView.Adapter<ComplaintDriver
     @Override
     public void onBindViewHolder(@NonNull ComplaintDriverAdapter.ViewHolder holder, int position) {
         Complaint complaint = complaintArrayList.get(holder.getAdapterPosition());
-        holder.txtaddress.setText("Address : "+complaint.getAddress());
+        holder.txtaddress.setText(""+complaint.getAddress());
         holder.txtlatitide.setText("Latitude - "+complaint.getLattitude());
         holder.txtlongitude.setText("Longitude - "+ complaint.getLongitude());
 
