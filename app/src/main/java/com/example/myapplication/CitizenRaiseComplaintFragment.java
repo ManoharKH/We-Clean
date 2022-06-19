@@ -662,7 +662,7 @@ public class CitizenRaiseComplaintFragment extends Fragment implements View.OnCl
                             Double complaintLongitude = Double.parseDouble(ds.child("longitude").getValue(String.class));
                             Double citizenlatitude = Double.parseDouble(txtlattitude.getText().toString());
                             Double citizenlongitude = Double.parseDouble(txtlongitude.getText().toString());
-                            Double errorRate = 0.00003;
+                            Double errorRate = 0.002;
                             String complaintadminStatus = ds.child("adminStatus").getValue(String.class);
                             String complaintcitizenStatus = ds.child("citizenStatus").getValue(String.class);
 
