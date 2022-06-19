@@ -228,7 +228,7 @@ public class CleanAndUpdateByDriver extends AppCompatActivity {
                     Double driver_longitude = Double.parseDouble(driver_long);
                     Double citizen_latitude = Double.parseDouble(latitude);
                     Double citizen_longitude = Double.parseDouble(longitude);
-                    Double errorRate = 0.002;
+                    Double errorRate = 0.02;
 
 
                     if ((driver_latitude + errorRate) > citizen_latitude &&

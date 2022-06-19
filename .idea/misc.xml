@@ -21,11 +21,24 @@
         <entry key="..\:/college/Main Project/Final code/WeCleanAste-master/app/src/main/res/drawable/ic_launcher_background.xml" value="0.14635416666666667" />
         <entry key="..\:/college/Main Project/Final code/WeCleanAste-master/app/src/main/res/layout/activity_add_driver_to_complaint.xml" value="0.176" />
         <entry key="..\:/college/Main Project/Final code/WeCleanAste-master/app/src/main/res/layout/activity_admin_verify.xml" value="0.1793478260869565" />
+        <entry key="..\:/college/Main Project/Final code/WeCleanAste-master/app/src/main/res/layout/activity_citizen_home.xml" value="0.25416666666666665" />
         <entry key="..\:/college/Main Project/Final code/WeCleanAste-master/app/src/main/res/layout/activity_clean_and_update_by_driver.xml" value="0.140625" />
         <entry key="..\:/college/Main Project/Final code/WeCleanAste-master/app/src/main/res/layout/activity_driver_home.xml" value="0.1793478260869565" />
+        <entry key="..\:/college/Main Project/Final code/WeCleanAste-master/app/src/main/res/layout/activity_my_complaint.xml" value="0.25416666666666665" />
         <entry key="..\:/college/Main Project/Final code/WeCleanAste-master/app/src/main/res/layout/activity_profile.xml" value="0.1793478260869565" />
+        <entry key="..\:/college/Main Project/Final code/WeCleanAste-master/app/src/main/res/layout/activity_splash.xml" value="0.25416666666666665" />
         <entry key="..\:/college/Main Project/Final code/WeCleanAste-master/app/src/main/res/layout/adddriver.xml" value="0.140625" />
         <entry key="..\:/college/Main Project/Final code/WeCleanAste-master/app/src/main/res/layout/adding_driver.xml" value="0.140625" />
+        <entry key="..\:/college/Main Project/Final code/WeCleanAste-master/app/src/main/res/layout/complaint_citizen_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/college/Main Project/Final code/WeCleanAste-master/app/src/main/res/layout/fragment_admin_work_in_progress.xml" value="0.25416666666666665" />
+        <entry key="..\:/college/Main Project/Final code/WeCleanAste-master/app/src/main/res/layout/fragment_citizen_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/college/Main Project/Final code/WeCleanAste-master/app/src/main/res/layout/fragment_citizen_mycomplaint.xml" value="0.25416666666666665" />
+        <entry key="..\:/college/Main Project/Final code/WeCleanAste-master/app/src/main/res/layout/fragment_citizen_raise_complaint.xml" value="0.25416666666666665" />
+        <entry key="..\:/college/Main Project/Final code/WeCleanAste-master/app/src/main/res/layout/resolved_comp.xml" value="0.25416666666666665" />
+        <entry key="..\:/college/Main Project/Final code/WeCleanAste-master/app/src/main/res/layout/style_spinner_adddriver.xml" value="0.25416666666666665" />
+        <entry key="..\:/college/Main Project/Final code/WeCleanAste-master/app/src/main/res/layout/toolbar.xml" value="0.25416666666666665" />
+        <entry key="..\:/college/Main Project/Final code/WeCleanAste-master/app/src/main/res/layout/toolbar_comp.xml" value="0.25416666666666665" />
+        <entry key="..\:/college/Main Project/Final code/WeCleanAste-master/app/src/main/res/layout/toolbar_raisecomp.xml" value="0.25416666666666665" />
         <entry key="..\:/college/Main Project/Final code/WeCleanAste-master/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2703125" />
         <entry key="..\:/college/Main Project/Final code/WeCleanAste-master/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.14635416666666667" />
       </map>
