@@ -98,6 +98,7 @@ public class DriverHomeActivity extends AppCompatActivity implements ComplaintDr
                         mAuth.signOut();
                         Intent i = new Intent(DriverHomeActivity.this,LoginActivity.class);
                         startActivity(i);
+                        finish();
                         return true;
 
 

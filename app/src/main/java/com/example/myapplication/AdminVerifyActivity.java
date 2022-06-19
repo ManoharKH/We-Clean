@@ -32,7 +32,7 @@ import java.util.Map;
 
 public class AdminVerifyActivity extends AppCompatActivity {
 
-    private TextView txtaddress,txtcitizenlatitude,txtcitizenlongitude,txtdriverlatitude,txtdriverlongitude;
+    private TextView txtaddress,txtcitizenlatitude,txtcitizenlongitude,txtcitizenImage,txtdriverImage;
     private Button btnaccept,btnreject;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
@@ -58,6 +58,9 @@ public class AdminVerifyActivity extends AppCompatActivity {
         txtaddress = (TextView) findViewById(R.id.txt_address);
         txtcitizenlatitude = (TextView) findViewById(R.id.txt_citizenlatitude);
         txtcitizenlongitude = (TextView) findViewById(R.id.txt_citizenlongitude);
+        txtcitizenImage = (TextView) findViewById(R.id.txt_tvcitizenImage);
+        txtdriverImage = (TextView) findViewById(R.id.txt_tvdriverImage);
+
         btnaccept = (Button) findViewById(R.id.btn_accept);
         btnreject = (Button) findViewById(R.id.btn_reject);
 
@@ -93,6 +96,8 @@ public class AdminVerifyActivity extends AppCompatActivity {
                         .addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
                             @Override
                             public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                                txtcitizenImage.setVisibility(View.VISIBLE);
+                                imageView.setVisibility(View.VISIBLE);
                                 Bitmap bitmap= BitmapFactory.decodeFile(localFile.getAbsolutePath());
                                 ((ImageView)findViewById(R.id.imageView)).setImageBitmap(bitmap);
                                 progressDialog.dismiss();
@@ -115,6 +120,8 @@ public class AdminVerifyActivity extends AppCompatActivity {
                             .addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
                                 @Override
                                 public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                                    txtdriverImage.setVisibility(View.VISIBLE);
+                                    imageView1.setVisibility(View.VISIBLE);
                                     Bitmap bitmap= BitmapFactory.decodeFile(localFile1.getAbsolutePath());
                                     ((ImageView)findViewById(R.id.imageView1)).setImageBitmap(bitmap);
                                     progressDialog.dismiss();
