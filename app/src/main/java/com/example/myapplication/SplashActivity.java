@@ -1,11 +1,17 @@
 package com.example.myapplication;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.Settings;
 import android.view.WindowManager;
 import android.widget.Toast;
 
@@ -40,21 +46,59 @@ public class SplashActivity extends AppCompatActivity {
         lottieAnimationView2 = findViewById(R.id.textsl);
 
         FirebaseUser user = mAuth.getCurrentUser();
-        if (user != null){
-            String uid = user.getUid();
-            checkUserCategory(uid);
+        if (isConnected()){
+            // Internet is available
+            if (user != null){
+                String uid = user.getUid();
+                checkUserCategory(uid);
+            }else{
+                handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent intent = new Intent(SplashActivity.this,LoginActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                }, 5000);
+            }
         }else{
-            handler = new Handler();
-            handler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    Intent intent = new Intent(SplashActivity.this,LoginActivity.class);
-                    startActivity(intent);
-                    finish();
-                }
-            }, 5000);
+            // Ask to turn on Internet
+            Toast.makeText(SplashActivity.this, "No internet", Toast.LENGTH_SHORT).show();
+            showCustomDialog();
         }
 
+
+    }
+
+    private boolean isConnected() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo wifiConnection =  connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+        NetworkInfo dataConnection =  connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+
+        if ((wifiConnection != null && wifiConnection.isConnected()) ||
+                (dataConnection != null && dataConnection.isConnected())){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    private void showCustomDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(SplashActivity.this);
+        builder.setMessage("Please connect to Internet.").setCancelable(false)
+                .setPositiveButton("Connect", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
+                    }
+                }).setNegativeButton("Close", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                moveTaskToBack(true);
+                SplashActivity.this.finish();
+            }
+        }).show();
     }
 
     private void checkUserCategory(String uid) {
@@ -98,5 +142,28 @@ public class SplashActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
+        FirebaseUser user = mAuth.getCurrentUser();
+        if (isConnected()){
+            // Internet is available
+            if (user != null){
+                String uid = user.getUid();
+                checkUserCategory(uid);
+            }else{
+                handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent intent = new Intent(SplashActivity.this,LoginActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
+                        finish();
+                    }
+                }, 5000);
+            }
+        }else{
+            // Ask to turn on Internet
+            Toast.makeText(SplashActivity.this, "No internet", Toast.LENGTH_SHORT).show();
+            showCustomDialog();
+        }
     }
 }
