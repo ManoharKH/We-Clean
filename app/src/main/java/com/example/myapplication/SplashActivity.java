@@ -45,30 +45,6 @@ public class SplashActivity extends AppCompatActivity {
         lottieAnimationView1 = findViewById(R.id.lottie);
         lottieAnimationView2 = findViewById(R.id.textsl);
 
-        FirebaseUser user = mAuth.getCurrentUser();
-        if (isConnected()){
-            // Internet is available
-            if (user != null){
-                String uid = user.getUid();
-                checkUserCategory(uid);
-            }else{
-                handler = new Handler();
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        Intent intent = new Intent(SplashActivity.this,LoginActivity.class);
-                        startActivity(intent);
-                        finish();
-                    }
-                }, 5000);
-            }
-        }else{
-            // Ask to turn on Internet
-            Toast.makeText(SplashActivity.this, "No internet", Toast.LENGTH_SHORT).show();
-            showCustomDialog();
-        }
-
-
     }
 
     private boolean isConnected() {

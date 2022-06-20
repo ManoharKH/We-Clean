@@ -4,17 +4,18 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Complaint implements Parcelable {
-    private String userID, driverID , adminStatus, citizenStatus, address,lattitude,longitude,
+    private String userID, driverID , adminStatus, citizenStatus, driverStatus,address,lattitude,longitude,
             dateofComplaint,citizenImageFilename,driverImageFilename;
 
     public Complaint() {
     }
 
-    public Complaint(String userID, String driverID, String adminStatus, String citizenStatus, String address, String lattitude, String longitude, String dateofComplaint, String citizenImageFilename, String driverImageFilename) {
+    public Complaint(String userID, String driverID, String adminStatus, String citizenStatus, String driverStatus, String address, String lattitude, String longitude, String dateofComplaint, String citizenImageFilename, String driverImageFilename) {
         this.userID = userID;
         this.driverID = driverID;
         this.adminStatus = adminStatus;
         this.citizenStatus = citizenStatus;
+        this.driverStatus = driverStatus;
         this.address = address;
         this.lattitude = lattitude;
         this.longitude = longitude;
@@ -28,6 +29,7 @@ public class Complaint implements Parcelable {
         driverID = in.readString();
         adminStatus = in.readString();
         citizenStatus = in.readString();
+        driverStatus = in.readString();
         address = in.readString();
         lattitude = in.readString();
         longitude = in.readString();
@@ -128,6 +130,14 @@ public class Complaint implements Parcelable {
         this.driverImageFilename = driverImageFilename;
     }
 
+    public String getDriverStatus() {
+        return driverStatus;
+    }
+
+    public void setDriverStatus(String driverStatus) {
+        this.driverStatus = driverStatus;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -139,6 +149,7 @@ public class Complaint implements Parcelable {
         parcel.writeString(driverID);
         parcel.writeString(adminStatus);
         parcel.writeString(citizenStatus);
+        parcel.writeString(driverStatus);
         parcel.writeString(address);
         parcel.writeString(lattitude);
         parcel.writeString(longitude);

@@ -18,4 +18,5 @@
     <string name="Rate">Rate</string>
     <string name="Share">Share</string>
     <string name="pending_complaints">Pending Complaints</string>
+    <string name="under_verification">Under Verification</string>
 </resources>

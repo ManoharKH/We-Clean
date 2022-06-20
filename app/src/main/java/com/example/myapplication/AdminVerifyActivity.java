@@ -37,7 +37,7 @@ public class AdminVerifyActivity extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     Complaint complaint;
-    String address,adminStatus,citizenStatus,latitude,longitude,userID,driverID,citizenImageFilename,driverImageFilename;
+    String address,adminStatus,citizenStatus,driverStatus,latitude,longitude,userID,driverID,citizenImageFilename,driverImageFilename;
     int fragmentID = 1;
 
     ImageView imageView;
@@ -147,16 +147,19 @@ public class AdminVerifyActivity extends AppCompatActivity {
                 if (adminStatus.equals("No Actions Taken")){
                     adminStatus = "Complaint Verified";
                     citizenStatus = "Complaint Verified";
+                    driverStatus = "123";
                     fragmentID = 1;
                 }else{
                     adminStatus = "Complaint Resolved";
                     citizenStatus = "Complaint Resolved";
+                    driverStatus = "Comaplaint Resolved";
                     fragmentID = 5;
                 }
                 Map<String,Object> map = new HashMap<>();
                 map.put("address",address);
                 map.put("adminStatus",adminStatus);
                 map.put("citizenStatus",citizenStatus);
+                map.put("driverStatus",driverStatus);
                 map.put("driverID",driverID);
                 map.put("lattitude",latitude);
                 map.put("longitude",longitude);
@@ -212,6 +215,7 @@ public class AdminVerifyActivity extends AppCompatActivity {
                 }else{
                     adminStatus = "Driver Added";
                     citizenStatus = "Processing";
+                    driverStatus = "Work in progress";
                     Map<String,Object> map = new HashMap<>();
                     map.put("address",address);
                     map.put("adminStatus",adminStatus);
@@ -230,7 +234,7 @@ public class AdminVerifyActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<Void> task) {
                             Toast.makeText(AdminVerifyActivity.this,"Rejected", Toast.LENGTH_SHORT).show();
                             Intent it = new Intent(AdminVerifyActivity.this, AdminHomeActivity.class);
-                            it.putExtra("fragmentId",3);
+                            it.putExtra("fragmentId",4);
                             startActivity(it);
                             finish();
                         }

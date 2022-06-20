@@ -37,7 +37,7 @@ public class AddDriverToComplaintActivity extends AppCompatActivity{
     private ArrayList<String> driverIDArrayList = new ArrayList<>();
     private ArrayList<String> workingDriverIDArrayList = new ArrayList<>();
     Complaint complaint;
-    String address,adminStatus,citizenStatus,latitude,longitude,userID,driverID;
+    String address,adminStatus,citizenStatus,driverStatus,latitude,longitude,userID,driverID;
     Button btnaddDriver;
     private TextView txtdrivername,txtmobilenumber,txtactivecomplaint;
 
@@ -45,7 +45,6 @@ public class AddDriverToComplaintActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_driver_to_complaint);
-
 
         getSupportActionBar().hide();
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -90,11 +89,13 @@ public class AddDriverToComplaintActivity extends AppCompatActivity{
                 driverID =  spinner_drivername.getSelectedItem().toString();
                 adminStatus = "Driver Added";
                 citizenStatus = "Processing";
+                driverStatus = "Work in progress";
 
                 Map<String,Object> map = new HashMap<>();
                 map.put("address",address);
                 map.put("adminStatus",adminStatus);
                 map.put("citizenStatus",citizenStatus);
+                map.put("driverStatus",driverStatus);
                 map.put("driverID",driverID);
                 map.put("lattitude",latitude);
                 map.put("longitude",longitude);
@@ -108,7 +109,7 @@ public class AddDriverToComplaintActivity extends AppCompatActivity{
                     public void onComplete(@NonNull Task<Void> task) {
                         Toast.makeText(AddDriverToComplaintActivity.this,"Driver has been added successfully",Toast.LENGTH_SHORT).show();
                         Intent it = new Intent(AddDriverToComplaintActivity.this, AdminHomeActivity.class);
-                        it.putExtra("fragmentId",2);
+                        it.putExtra("fragmentId",3);
                         startActivity(it);
                         finish();
                     }

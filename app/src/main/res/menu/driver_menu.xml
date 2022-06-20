@@ -2,15 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
+        <item android:title="Driver Status">
+            <menu>
+                <item android:id="@+id/nav_driver_home"
+                    android:title="@string/home"
+                    android:icon="@drawable/ic_nav_home" />
 
-        <item android:id="@+id/nav_driver_home"
-            android:title="@string/home"
-            android:icon="@drawable/ic_nav_home"/>
+                <item android:id="@+id/nav_driver_under_verification"
+                    android:title="@string/under_verification"
+                    android:icon="@drawable/ic_rate"/>
 
-
-
+                <item android:title="Work Completed"
+                    android:id="@+id/nav_driver_work_completed"
+                    android:icon="@drawable/ic_baseline_share_24"/>
+            </menu>
+        </item>
     </group>
-
     <group android:checkableBehavior="single">
 
         <item android:title="Profile">
@@ -21,8 +28,7 @@
 
                 <item android:title="@string/logout"
                     android:id="@+id/nav_driver_logout"
-                    android:icon="@drawable/ic_logout"
-                    />
+                    android:icon="@drawable/ic_logout" />
 
             </menu>
 
