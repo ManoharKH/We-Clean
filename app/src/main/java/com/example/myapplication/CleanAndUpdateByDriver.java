@@ -80,9 +80,8 @@ public class CleanAndUpdateByDriver extends AppCompatActivity {
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
     Complaint driverComplaint;
-    String address,adminStatus,citizenStatus,latitude,longitude,userID,driverID,driverImageFilename;
+    String address,adminStatus,citizenStatus, driverStatus,latitude,longitude,userID,driverID,driverImageFilename;
 
-    //
     Button picture;
     int imageSize = 224;
     int flag =0;
@@ -100,13 +99,10 @@ public class CleanAndUpdateByDriver extends AppCompatActivity {
     String sDestination="";
     public static final int CAMERA_PERM_CODE = 201;
     public static final int CAMERA_REQUEST_CODE = 202;
-    //ImageView selectedImage;
+
     String currentPhotoPath;
     ProgressDialog uploading;
     StorageReference storageReference;
-
-
-    //
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,8 +123,7 @@ public class CleanAndUpdateByDriver extends AppCompatActivity {
         btnsubmit = (Button) findViewById(R.id.btn_submit);
         btnmap = (Button) findViewById(R.id.btn_maps);
 
-        //btnmap.setEnabled(false);
-        //
+
         PREMISSIONS = new String[] {
                 Manifest.permission.CAMERA,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE
@@ -137,7 +132,6 @@ public class CleanAndUpdateByDriver extends AppCompatActivity {
         databaseReference = FirebaseDatabase.getInstance().getReference("Images");
         storageReference = FirebaseStorage.getInstance().getReference();
 
-        //
         driverComplaint = getIntent().getParcelableExtra("driverComplaint");
 
         firebaseDatabase = FirebaseDatabase.getInstance();
@@ -203,6 +197,7 @@ public class CleanAndUpdateByDriver extends AppCompatActivity {
             sDestination=address;
             adminStatus = driverComplaint.getAdminStatus();
             citizenStatus = driverComplaint.getCitizenStatus();
+            driverStatus = driverComplaint.getDriverStatus();
             latitude = driverComplaint.getLattitude();
             longitude = driverComplaint.getLongitude();
             userID = driverComplaint.getUserID();
@@ -526,6 +521,7 @@ public class CleanAndUpdateByDriver extends AppCompatActivity {
                             uploading.hide();
 
                             adminStatus = "Cleaning Done";
+                            driverStatus = "Under Verification";
                             Map<String, Object> map = new HashMap<>();
                             map.put("address", address);
                             map.put("adminStatus", adminStatus);

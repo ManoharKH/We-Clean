@@ -386,7 +386,6 @@ public class CitizenRaiseComplaintFragment extends Fragment implements View.OnCl
                                 public void onFailure(@NonNull Exception e) {
                                     Toast.makeText(getContext(), "Upload Failed.", Toast.LENGTH_SHORT).show();
 
-                                    //Extra
                                     progressDialog.dismiss();
                                 }
                             });
@@ -396,6 +395,7 @@ public class CitizenRaiseComplaintFragment extends Fragment implements View.OnCl
                             String Address = txtaddress.getText().toString();
                             String citizenStatus = "Complaint Registered";
                             String adminStatus = "No Actions Taken";
+                            String driverStatus = "123";
                             String driverID = "123";
                             String citizenImageFilename = name;
                             String driverImageFilename = "123";
@@ -410,7 +410,7 @@ public class CitizenRaiseComplaintFragment extends Fragment implements View.OnCl
 
                             if(!lat.isEmpty() && !llong.isEmpty() && !Address.isEmpty()){
                                 Complaint complaint = new Complaint(userID,driverID,adminStatus,citizenStatus,
-                                        Address,lat,llong,today,citizenImageFilename,driverImageFilename);
+                                        driverStatus,Address,lat,llong,today,citizenImageFilename,driverImageFilename);
 
                                 databaseReference.child(complaintKey).setValue(complaint);
                             }else{
@@ -662,7 +662,7 @@ public class CitizenRaiseComplaintFragment extends Fragment implements View.OnCl
                             Double complaintLongitude = Double.parseDouble(ds.child("longitude").getValue(String.class));
                             Double citizenlatitude = Double.parseDouble(txtlattitude.getText().toString());
                             Double citizenlongitude = Double.parseDouble(txtlongitude.getText().toString());
-                            Double errorRate = 0.002;
+                            Double errorRate = 0.0002;
                             String complaintadminStatus = ds.child("adminStatus").getValue(String.class);
                             String complaintcitizenStatus = ds.child("citizenStatus").getValue(String.class);
 
