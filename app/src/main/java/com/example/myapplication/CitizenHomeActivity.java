@@ -105,6 +105,7 @@ public class CitizenHomeActivity extends AppCompatActivity {
                     case 3:
                         fragment = new CitizenRaiseComplaintFragment();
                         break;
+
                 }
                 loadFragment(fragment);
             }
@@ -178,6 +179,12 @@ public class CitizenHomeActivity extends AppCompatActivity {
                         break;
 
                     case R.id.nav_reportbug:
+                        Intent sendmail = new Intent(Intent.ACTION_SEND);
+                        sendmail.setType("txt/plain");
+                        sendmail.putExtra(Intent.EXTRA_EMAIL, new String[]{"weclean@gmail.com"});
+                        sendmail.putExtra(Intent.EXTRA_SUBJECT, "Your complaint subject");
+                        sendmail.putExtra(Intent.EXTRA_TEXT,"Your complaint body");
+                        startActivity(sendmail);
                         break;
 
                     case R.id.nav_privacy:

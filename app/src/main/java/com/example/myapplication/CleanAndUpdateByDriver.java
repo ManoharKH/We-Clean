@@ -186,7 +186,8 @@ public class CleanAndUpdateByDriver extends AppCompatActivity {
                 }
                 else{
                     //Toast.makeText(getApplicationContext(), sDestination, Toast.LENGTH_SHORT).show();
-                    openmap(sSource,sDestination);
+                    //openmap(sSource,sDestination);
+                    openmap(latitude,longitude);
                 }
             }
         });
@@ -259,14 +260,20 @@ public class CleanAndUpdateByDriver extends AppCompatActivity {
         });
     }
 
-    private void openmap(String sSource, String sDestination) {
+    private void openmap(String laat, String loog) {
         //If the device does not have a map installed, then redirect it to play store
         try{
             //When google map is installed
             //Initilize uri
             //Uri uri = Uri.parse("https://www.google.co.in/maps/dir/" + sSource + "/" + sDestination);
             //Obtaining map direction from your location to destination
-            Uri uri = Uri.parse("https://www.google.co.in/maps/dir/" +""+ "/" + sDestination);
+
+            //Uri uri = Uri.parse("https://www.google.co.in/maps/dir/" +""+ "/" + sDestination);
+
+            Uri uri = Uri.parse("https://www.google.co.in/maps/dir/" +""+ "/" + laat+","+loog);
+
+
+
             //float laat=Float.valueOf(latitude);
             //float loog=Float.valueOf(longitude);
             //Uri uri = Uri.parse("geo:"+laat+","+loog+"?q"+Uri.parse("geo:"+laat+","+loog));
