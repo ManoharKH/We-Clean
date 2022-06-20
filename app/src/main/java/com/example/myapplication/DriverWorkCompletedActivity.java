@@ -36,7 +36,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
 
-public class DriverHomeActivity extends AppCompatActivity implements ComplaintDriverAdapter.ComplaintDriverClickInterface {
+public class DriverWorkCompletedActivity extends AppCompatActivity implements ComplaintDriverAdapter.ComplaintDriverClickInterface {
 
     private RecyclerView drivercomplaintRV;
     private TextView txtlatitude,txtlongitude,txtaddress;
@@ -87,28 +87,29 @@ public class DriverHomeActivity extends AppCompatActivity implements ComplaintDr
                 switch (item.getItemId()){
 
                     case R.id.nav_driver_home:
-                        startActivity(new Intent(DriverHomeActivity.this,DriverHomeActivity.class).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP));
+                        startActivity(new Intent(DriverWorkCompletedActivity.this,DriverHomeActivity.class));
                         break;
 
                     case R.id.nav_driver_under_verification:
-                        startActivity(new Intent(DriverHomeActivity.this,DriverUnderVerificationActivity.class));
+                        startActivity(new Intent(DriverWorkCompletedActivity.this,DriverUnderVerificationActivity.class));
                         break;
 
                     case R.id.nav_driver_work_completed:
-                        startActivity(new Intent(DriverHomeActivity.this,DriverWorkCompletedActivity.class));
+                        startActivity(new Intent(DriverWorkCompletedActivity.this,DriverWorkCompletedActivity.class)
+                                .addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP));
                         break;
 
                     case R.id.nav_driver_profile:
-                        Toast.makeText(DriverHomeActivity.this, "Driver Details", Toast.LENGTH_SHORT).show();
-                        Intent it = new Intent(DriverHomeActivity.this, ProfileActivity.class);
+                        Toast.makeText(DriverWorkCompletedActivity.this, "Driver Details", Toast.LENGTH_SHORT).show();
+                        Intent it = new Intent(DriverWorkCompletedActivity.this, ProfileActivity.class);
                         startActivity(it);
                         overridePendingTransition(0,0);
                         break;
 
                     case R.id.nav_driver_logout:
-                        Toast.makeText(DriverHomeActivity.this, "Driver logged out", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(DriverWorkCompletedActivity.this, "Driver logged out", Toast.LENGTH_SHORT).show();
                         mAuth.signOut();
-                        Intent i = new Intent(DriverHomeActivity.this,LoginActivity.class);
+                        Intent i = new Intent(DriverWorkCompletedActivity.this,LoginActivity.class);
                         startActivity(i);
                         finish();
                         return true;
@@ -144,7 +145,7 @@ public class DriverHomeActivity extends AppCompatActivity implements ComplaintDr
                 String driverStatus = snapshot.child("driverStatus").getValue(String.class);
                 String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
-                if(uid.equals(driverID) && driverStatus.equals("Work in progress")){
+                if(uid.equals(driverID) && driverStatus.equals("Complaint Resolved")){
                     complaintArrayList.add(snapshot.getValue(Complaint.class));
                     cnt = cnt + 1;
                     complaintDriverAdapter.notifyDataSetChanged();
@@ -201,7 +202,7 @@ public class DriverHomeActivity extends AppCompatActivity implements ComplaintDr
     }
 
     private void displayBottomSheetDriver(Complaint complaint){
-        final  BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
+        final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
         View layout = LayoutInflater.from(this).inflate(R.layout.bottom_sheet_dailog_driver,bottomSheetRL);
         bottomSheetDialog.setContentView(layout);
         bottomSheetDialog.setCancelable(false);
@@ -228,7 +229,7 @@ public class DriverHomeActivity extends AppCompatActivity implements ComplaintDr
         btnupdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent it = new Intent(DriverHomeActivity.this,CleanAndUpdateByDriver.class);
+                Intent it = new Intent(DriverWorkCompletedActivity.this,CleanAndUpdateByDriver.class);
                 it.putExtra("driverComplaint",complaint);
                 startActivity(it);
             }
@@ -247,9 +248,9 @@ public class DriverHomeActivity extends AppCompatActivity implements ComplaintDr
         int id = item.getItemId();
         switch (id){
             case R.id.logout:
-                Toast.makeText(DriverHomeActivity.this,"User logged out",Toast.LENGTH_SHORT).show();
+                Toast.makeText(DriverWorkCompletedActivity.this,"User logged out",Toast.LENGTH_SHORT).show();
                 mAuth.signOut();
-                Intent it = new Intent(DriverHomeActivity.this,LoginActivity.class);
+                Intent it = new Intent(DriverWorkCompletedActivity.this,LoginActivity.class);
                 startActivity(it);
                 this.finish();
                 return true;
