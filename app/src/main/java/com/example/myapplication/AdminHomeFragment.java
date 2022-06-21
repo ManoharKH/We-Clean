@@ -31,11 +31,11 @@ public class AdminHomeFragment extends Fragment {
     private String mParam2;
     private NeumorphCardView pendC, addDriver, inprog, workC, resolvedC, cardRight;
 
-    int fragmentID1 = 2;
-    int fragmentID2 = 3;
-    int fragmentID3 = 4;
-    int fragmentID4 = 5;
-    int fragmentID5 = 6;
+   
+    private TextView wc, pt, pt2, at, at2, it, it2, wt,wt2, rt, rt2;
+    private ShapeableImageView pi, ai, wi, ii, ri;
+    int fragmentId = 1;
+    private float v = 0;
 
     public AdminHomeFragment() {
         // Required empty public constructor
@@ -80,6 +80,22 @@ public class AdminHomeFragment extends Fragment {
         workC =view.findViewById(R.id.work_comp);
         resolvedC = view.findViewById(R.id.resolved_comp);
         cardRight = view.findViewById(R.id.cardright);
+        wc = view.findViewById(R.id.txtweclean);
+        pi = view.findViewById(R.id.pi);
+        pt = view.findViewById(R.id.pt);
+        pt2 =view.findViewById(R.id.pt2);
+        ai = view.findViewById(R.id.ai);
+        at = view.findViewById(R.id.at);
+        at2 = view.findViewById(R.id.at2);
+        ii =view.findViewById(R.id.ii);
+        it = view.findViewById(R.id.it);
+        it2 = view.findViewById(R.id.it2);
+        ri = view.findViewById(R.id.ri);
+        rt =view.findViewById(R.id.rt);
+        rt2 =view.findViewById(R.id.rt2);
+        wi = view.findViewById(R.id.wi);
+        wt =view.findViewById(R.id.wt);
+        wt2 =view.findViewById(R.id.wt2);
 
 
         cardRight.setOnClickListener(new View.OnClickListener() {
@@ -90,48 +106,118 @@ public class AdminHomeFragment extends Fragment {
             }
         });
 
+        wc.setTranslationY(300);
+        pendC.setTranslationY(300);
+        pi.setTranslationY(300);
+        pt.setTranslationY(300);
+        pt2.setTranslationY(300);
+        addDriver.setTranslationY(300);
+        ai.setTranslationY(300);
+        at.setTranslationY(300);
+        at2.setTranslationY(300);
+        inprog.setTranslationY(300);
+        ii.setTranslationY(300);
+        it.setTranslationY(300);
+        it2.setTranslationY(300);
+        workC.setTranslationY(300);
+        wi.setTranslationY(300);
+        wt.setTranslationY(300);
+        wt2.setTranslationY(300);
+        resolvedC.setTranslationY(300);
+        ri.setTranslationY(300);
+        rt.setTranslationY(300);
+        rt2.setTranslationY(300);
+
+
+        wc.setAlpha(v);
+        pendC.setAlpha(v);
+        pi.setAlpha(v);
+        pt.setAlpha(v);
+        pt2.setAlpha(v);
+        addDriver.setAlpha(v);
+        ai.setAlpha(v);
+        at.setAlpha(v);
+        at2.setAlpha(v);
+        inprog.setAlpha(v);
+        ii.setAlpha(v);
+        it.setAlpha(v);
+        it2.setAlpha(v);
+        workC.setAlpha(v);
+        wi.setAlpha(v);
+        wt.setAlpha(v);
+        wt2.setAlpha(v);
+        resolvedC.setAlpha(v);
+        ri.setAlpha(v);
+        rt.setAlpha(v);
+        rt2.setAlpha(v);
+
+
+
+        wc.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(200).start();
+        pendC.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(200).start();
+        pi.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(200).start();
+        pt.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(200).start();
+        pt2.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(200).start();
+        addDriver.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
+        ai.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
+        at.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
+        at2.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
+        inprog.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(600).start();
+        ii.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(600).start();
+        it.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(600).start();
+        it2.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(600).start();
+        workC.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(800).start();
+        wi.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(800).start();
+        wt.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(800).start();
+        wt2.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(800).start();
+        resolvedC.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(1000).start();
+        ri.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(1000).start();
+        rt.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(1000).start();
+        rt2.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(1000).start();
+
+
         pendC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it_pend_cmp = new Intent(getContext(),AdminHomeActivity.class);
-                it_pend_cmp.putExtra("fragmentId",fragmentID1);
-                startActivity(it_pend_cmp);
+                Intent it = new Intent(getContext(), AdminHomeActivity.class);
+                it.putExtra("fragmentId",2);
+                startActivity(it);
             }
         });
 
         addDriver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it_add_driver = new Intent(getContext(),AdminHomeActivity.class);
-                it_add_driver.putExtra("fragmentId",fragmentID2);
-                startActivity(it_add_driver);
+                Intent it = new Intent(getContext(), AdminHomeActivity.class);
+                it.putExtra("fragmentId",3);
+                startActivity(it);
             }
         });
 
         inprog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it_in_prog = new Intent(getContext(),AdminHomeActivity.class);
-                it_in_prog.putExtra("fragmentId",fragmentID3);
-                startActivity(it_in_prog);
+                Intent it = new Intent(getContext(), AdminHomeActivity.class);
+                it.putExtra("fragmentId",4);
+                startActivity(it);
             }
         });
 
         workC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it_work_comp = new Intent(getContext(),AdminHomeActivity.class);
-                it_work_comp.putExtra("fragmentId",fragmentID4);
-                startActivity(it_work_comp);
+                Intent it = new Intent(getContext(), AdminHomeActivity.class);
+                it.putExtra("fragmentId",5);
+                startActivity(it);
             }
         });
 
         resolvedC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it_resolved = new Intent(getContext(),AdminHomeActivity.class);
-                it_resolved.putExtra("fragmentId",fragmentID5);
-                startActivity(it_resolved);
+                Intent it = new Intent(getContext(), AdminHomeActivity.class);
+                it.putExtra("fragmentId",6);
+                startActivity(it);
             }
         });
 
