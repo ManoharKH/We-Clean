@@ -40,6 +40,7 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseDatabase firebaseDatabase;
     private Calendar calendar;
     private SimpleDateFormat dateFormat;
+    float v = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
