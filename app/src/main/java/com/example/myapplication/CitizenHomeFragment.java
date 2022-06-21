@@ -103,7 +103,16 @@ public class CitizenHomeFragment extends Fragment {
         yimg = view.findViewById(R.id.rc_img);
         bimg = view.findViewById(R.id.mc_img);
 
-        btnraiseComplaint.setOnClickListener(new View.OnClickListener() {
+        /*btnraiseComplaint.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent(getContext(),CitizenHomeActivity.class);
+                it.putExtra("fragmentId",fragmentID);
+                startActivity(it);
+            }
+        });
+         */
+        yel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent it = new Intent(getContext(),CitizenHomeActivity.class);
@@ -112,7 +121,17 @@ public class CitizenHomeFragment extends Fragment {
             }
         });
 
-        btnmyComplaint.setOnClickListener(new View.OnClickListener() {
+        /*btnmyComplaint.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent(getContext(),CitizenHomeActivity.class);
+                it.putExtra("fragmentId",fragmentID1);
+                startActivity(it);
+            }
+        });
+         */
+
+        blck.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent it = new Intent(getContext(),CitizenHomeActivity.class);
