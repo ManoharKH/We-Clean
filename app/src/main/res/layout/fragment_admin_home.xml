@@ -81,7 +81,8 @@
                         android:layout_height="88dp"
                         android:src="@drawable/pending_complogo"
                         app:shapeAppearanceOverlay="@style/Circular"
-                        android:scaleType="centerCrop"/>
+                        android:scaleType="centerCrop"
+                        android:id="@+id/pi"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -90,6 +91,7 @@
                         android:text="Verify Complaints"
                         android:textColor="@color/prim_text"
                         android:textSize="@dimen/_14sdp"
+                        android:id="@+id/pt"
                         android:textStyle="bold" />
 
                     <TextView
@@ -98,6 +100,7 @@
                         android:layout_marginTop="@dimen/_4sdp"
                         android:text="Verify user's complaint.."
                         android:textColor="@color/sec_text"
+                        android:id="@+id/pt2"      
                         android:textSize="@dimen/_10sdp" />
 
 
@@ -134,6 +137,7 @@
                         android:layout_height="88dp"
                         android:src="@drawable/adddriver"
                         app:shapeAppearanceOverlay="@style/Circular"
+                        android:id="@+id/ai"                                                      
                         android:scaleType="centerCrop"/>
 
                     <TextView
@@ -143,10 +147,12 @@
                         android:text="Adding the Driver"
                         android:textColor="@color/prim_text"
                         android:textSize="@dimen/_14sdp"
+                        android:id="@+id/at"      
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="match_parent"
+                        android:id="@+id/at2"      
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_4sdp"
                         android:text="To carry out work.."
@@ -186,6 +192,7 @@
                         android:layout_height="90dp"
                         android:src="@drawable/inprogress2"
                         app:shapeAppearanceOverlay="@style/Circ1"
+                        android:id="@+id/ii"                                                      
                         android:scaleType="centerCrop"/>
 
                     <TextView
@@ -195,6 +202,7 @@
                         android:text="Work in Progress"
                         android:textColor="@color/prim_text"
                         android:textSize="@dimen/_14sdp"
+                        android:id="@+id/it"      
                         android:textStyle="bold" />
 
                     <TextView
@@ -203,6 +211,7 @@
                         android:layout_marginTop="@dimen/_4sdp"
                         android:text="Cleaning going on.."
                         android:textColor="@color/sec_text"
+                        android:id="@+id/it2"      
                         android:textSize="@dimen/_10sdp" />
 
 
@@ -239,6 +248,7 @@
                         android:layout_height="88dp"
                         android:src="@drawable/workcompleted"
                         app:shapeAppearanceOverlay="@style/Circular"
+                        android:id="@+id/wi"                                                      
                         android:scaleType="centerCrop"/>
 
                     <TextView
@@ -248,6 +258,7 @@
                         android:text="Work Completed"
                         android:textColor="@color/prim_text"
                         android:textSize="@dimen/_14sdp"
+                        android:id="@+id/wt"      
                         android:textStyle="bold" />
 
                     <TextView
@@ -256,6 +267,7 @@
                         android:layout_marginTop="@dimen/_4sdp"
                         android:text="Waste has been cleared.."
                         android:textColor="@color/sec_text"
+                        android:id="@+id/wt2"      
                         android:textSize="@dimen/_10sdp" />
 
 
@@ -293,6 +305,7 @@
                         android:layout_height="88dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/resolvecomp"
+                        android:id="@+id/ri"                                                      
                         app:shapeAppearanceOverlay="@style/Circular" />
 
                     <TextView
@@ -302,6 +315,7 @@
                         android:text="Resolved Complaints"
                         android:textColor="@color/prim_text"
                         android:textSize="@dimen/_14sdp"
+                        android:id="@+id/rt"      
                         android:textStyle="bold" />
 
                     <TextView
@@ -310,6 +324,7 @@
                         android:layout_marginTop="@dimen/_4sdp"
                         android:text="Complaint solved successfully.."
                         android:textColor="@color/sec_text"
+                        android:id="@+id/rt2"     
                         android:textSize="@dimen/_10sdp" />
 
 
