@@ -44,6 +44,11 @@ public class AdminHomeActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
     MeowBottomNavigation bottomNavigation;
     int fragmentID = 1;
+    int fragmentID1 = 2;
+    int fragmentID2 = 3;
+    int fragmentID3 = 4;
+    int fragmentID4 = 5;
+    int fragmentID5 = 6;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
 
@@ -149,23 +154,43 @@ public class AdminHomeActivity extends AppCompatActivity {
                         break;
 
                     case R.id.nav_pend_cmp:
-                        fragment = new AdminPendingComplaintFragment();
-                        loadFragment(fragment);
+                        //fragment = new AdminPendingComplaintFragment();
+                        //loadFragment(fragment);
+                        Intent it_pend_cmp = new Intent(getApplicationContext(),AdminHomeActivity.class);
+                        it_pend_cmp.putExtra("fragmentId",fragmentID1);
+                        startActivity(it_pend_cmp);
+
                         break;
 
                     case R.id.nav_add_driver:
-                        fragment = new AddDriverToComplaintFragment();
-                        loadFragment(fragment);
+                        //fragment = new AddDriverToComplaintFragment();
+                        //loadFragment(fragment);
+
+                        Intent it_add_driver = new Intent(getApplicationContext(),AdminHomeActivity.class);
+                        it_add_driver.putExtra("fragmentId",fragmentID2);
+                        startActivity(it_add_driver);
                         break;
 
                     case R.id.nav_in_progress:
-                        fragment = new AdminWorkInProgressFragment();
-                        loadFragment(fragment);
+                        //fragment = new AdminWorkInProgressFragment();
+                        //loadFragment(fragment);
+                        Intent it_in_progress = new Intent(getApplicationContext(),AdminHomeActivity.class);
+                        it_in_progress.putExtra("fragmentId",fragmentID3);
+                        startActivity(it_in_progress);
                         break;
 
+                    case R.id.nav_work_cmp:
+                        Intent it_work_cmp = new Intent(getApplicationContext(),AdminHomeActivity.class);
+                        it_work_cmp.putExtra("fragmentId",fragmentID4);
+                        startActivity(it_work_cmp);
+                        break;
+                        
                     case R.id.nav_resolved_comp:
-                        fragment = new AdminResolvedComplaintFragment();
-                        loadFragment(fragment);
+                        //fragment = new AdminResolvedComplaintFragment();
+                        //loadFragment(fragment);
+                        Intent it_resolved_comp = new Intent(getApplicationContext(),AdminHomeActivity.class);
+                        it_resolved_comp.putExtra("fragmentId",fragmentID5);
+                        startActivity(it_resolved_comp);
                         break;
 
                     case R.id.nav_admin_profile:
@@ -187,6 +212,11 @@ public class AdminHomeActivity extends AppCompatActivity {
                         break;
 
                     case R.id.nav_share:
+                        Intent shareintent = new Intent(Intent.ACTION_SEND);
+                        shareintent.setType("text/plain");
+                        shareintent.putExtra(Intent.EXTRA_SUBJECT, "WeClean App");
+                        shareintent.putExtra(Intent.EXTRA_TEXT,"https://drive.google.com/drive/folders/1md3HcgJRw5Qfz5D0QN-xvr6gh7VHnQMl");
+                        startActivity(Intent.createChooser(shareintent,"Share using"));
                         break;
 
                     default:

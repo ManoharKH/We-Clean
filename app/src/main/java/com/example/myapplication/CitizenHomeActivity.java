@@ -38,6 +38,8 @@ public class CitizenHomeActivity extends AppCompatActivity {
     private NavigationView navigationView;
     ImageView menuIcon;
     int fragmentID = 1;
+    int fragmentID1 = 2;
+    int fragmentID2 = 3;
 
 
 //    Toolbar toolbar;
@@ -166,21 +168,31 @@ public class CitizenHomeActivity extends AppCompatActivity {
                     case R.id.nav_home:
                         fragment =new CitizenHomeFragment();
                         loadFragment(fragment);
+                        //Intent it_home = new Intent(getApplicationContext(),CitizenHomeActivity.class);
+                        //it_home.putExtra("fragmentId",fragmentID);
+                        //startActivity(it_home);
                         break;
 
                     case R.id.nav_my_cmp:
-                        fragment = new CitizenMycomplaintFragment();
-                        loadFragment(fragment);
+                        //fragment = new CitizenMycomplaintFragment();
+                        //loadFragment(fragment);
+                        Intent it_my_cmp = new Intent(getApplicationContext(),CitizenHomeActivity.class);
+                        it_my_cmp.putExtra("fragmentId",fragmentID1);
+                        startActivity(it_my_cmp);
                         break;
 
                     case R.id.nav_raise_cmp:
-                        fragment = new CitizenRaiseComplaintFragment();
-                        loadFragment(fragment);
+                        //fragment = new CitizenRaiseComplaintFragment();
+                        //loadFragment(fragment);
+                        Intent it_raise_cmp = new Intent(getApplicationContext(),CitizenHomeActivity.class);
+                        it_raise_cmp.putExtra("fragmentId",fragmentID2);
+                        startActivity(it_raise_cmp);
                         break;
 
                     case R.id.nav_reportbug:
                         Intent sendmail = new Intent(Intent.ACTION_SEND);
-                        sendmail.setType("txt/plain");
+                        sendmail.setType("text/html");
+                        sendmail.setPackage("com.google.android.gm"); //Added gmail package to forcefully open gmail app
                         sendmail.putExtra(Intent.EXTRA_EMAIL, new String[]{"weclean@gmail.com"});
                         sendmail.putExtra(Intent.EXTRA_SUBJECT, "Your complaint subject");
                         sendmail.putExtra(Intent.EXTRA_TEXT,"Your complaint body");
@@ -209,6 +221,11 @@ public class CitizenHomeActivity extends AppCompatActivity {
                         break;
 
                     case R.id.nav_share:
+                        Intent shareintent = new Intent(Intent.ACTION_SEND);
+                        shareintent.setType("text/plain");
+                        shareintent.putExtra(Intent.EXTRA_SUBJECT, "WeClean App");
+                        shareintent.putExtra(Intent.EXTRA_TEXT,"https://drive.google.com/drive/folders/1md3HcgJRw5Qfz5D0QN-xvr6gh7VHnQMl");
+                        startActivity(Intent.createChooser(shareintent,"Share using"));
                         break;
 
                     default:

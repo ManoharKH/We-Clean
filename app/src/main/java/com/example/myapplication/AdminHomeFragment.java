@@ -31,6 +31,12 @@ public class AdminHomeFragment extends Fragment {
     private String mParam2;
     private NeumorphCardView pendC, addDriver, inprog, workC, resolvedC, cardRight;
 
+    int fragmentID1 = 2;
+    int fragmentID2 = 3;
+    int fragmentID3 = 4;
+    int fragmentID4 = 5;
+    int fragmentID5 = 6;
+
     public AdminHomeFragment() {
         // Required empty public constructor
     }
@@ -83,6 +89,52 @@ public class AdminHomeFragment extends Fragment {
                 startActivity(i);
             }
         });
+
+        pendC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it_pend_cmp = new Intent(getContext(),AdminHomeActivity.class);
+                it_pend_cmp.putExtra("fragmentId",fragmentID1);
+                startActivity(it_pend_cmp);
+            }
+        });
+
+        addDriver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it_add_driver = new Intent(getContext(),AdminHomeActivity.class);
+                it_add_driver.putExtra("fragmentId",fragmentID2);
+                startActivity(it_add_driver);
+            }
+        });
+
+        inprog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it_in_prog = new Intent(getContext(),AdminHomeActivity.class);
+                it_in_prog.putExtra("fragmentId",fragmentID3);
+                startActivity(it_in_prog);
+            }
+        });
+
+        workC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it_work_comp = new Intent(getContext(),AdminHomeActivity.class);
+                it_work_comp.putExtra("fragmentId",fragmentID4);
+                startActivity(it_work_comp);
+            }
+        });
+
+        resolvedC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it_resolved = new Intent(getContext(),AdminHomeActivity.class);
+                it_resolved.putExtra("fragmentId",fragmentID5);
+                startActivity(it_resolved);
+            }
+        });
+
 
         return view;
     }

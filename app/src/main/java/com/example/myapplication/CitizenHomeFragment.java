@@ -48,6 +48,7 @@ public class CitizenHomeFragment extends Fragment {
     RelativeLayout yel, blck;
     ImageView yimg, bimg;
     int fragmentID = 3;
+    int fragmentID1 = 2;
 
 
     public CitizenHomeFragment() {
@@ -107,6 +108,15 @@ public class CitizenHomeFragment extends Fragment {
             public void onClick(View view) {
                 Intent it = new Intent(getContext(),CitizenHomeActivity.class);
                 it.putExtra("fragmentId",fragmentID);
+                startActivity(it);
+            }
+        });
+
+        btnmyComplaint.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent(getContext(),CitizenHomeActivity.class);
+                it.putExtra("fragmentId",fragmentID1);
                 startActivity(it);
             }
         });
