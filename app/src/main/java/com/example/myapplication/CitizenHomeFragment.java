@@ -44,9 +44,9 @@ public class CitizenHomeFragment extends Fragment {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     Button btnraiseComplaint, btnmyComplaint;
-    TextView raisec, compraise, myc, compmy,txtusername;
+    TextView raisec, compraise, myc, compmy,txtusername, wct, hlo, rc;
     RelativeLayout yel, blck;
-    ImageView yimg, bimg;
+    ImageView yimg, bimg, wclogo;
     int fragmentID = 3;
     int fragmentID1 = 2;
 
@@ -102,6 +102,10 @@ public class CitizenHomeFragment extends Fragment {
         blck = view.findViewById(R.id.bclr);
         yimg = view.findViewById(R.id.rc_img);
         bimg = view.findViewById(R.id.mc_img);
+        wct = view.findViewById(R.id.wct);
+        hlo = view.findViewById(R.id.hlo);
+        rc = view.findViewById(R.id.rc);
+        wclogo = view.findViewById(R.id.wclogo);
 
         /*btnraiseComplaint.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -141,6 +145,24 @@ public class CitizenHomeFragment extends Fragment {
         });
 
         getUsername();
+        
+        wct.setTranslationY(300);
+        hlo.setTranslationY(300);
+        rc.setTranslationY(300);
+        txtusername.setTranslationY(300);
+        wclogo.setTranslationY(300);
+
+        wct.setAlpha(v);
+        hlo.setAlpha(v);
+        rc.setAlpha(v);
+        wclogo.setAlpha(v);
+        txtusername.setAlpha(v);
+
+        wct.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(200).start();
+        hlo.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(200).start();
+        rc.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
+        txtusername.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(600).start();
+        wclogo.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
 
         yel.setTranslationX(800);
         blck.setTranslationX(800);
