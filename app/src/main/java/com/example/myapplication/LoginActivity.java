@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private EditText txtusername,txtpassword;
     private Button btnlogin,btnsignUp;
-    private TextView tv_forgotpassword;
+    private TextView tv_forgotpassword, lgntxt, lgnb, ee, ep, dhacc;
     private FirebaseAuth mAuth;
     private FirebaseDatabase firebaseDatabase;
     private Calendar calendar;
@@ -59,6 +59,11 @@ public class LoginActivity extends AppCompatActivity {
         tv_forgotpassword = (TextView) findViewById(R.id.textView_fgtpass);
         btnlogin = (Button) findViewById(R.id.btn_login);
         btnsignUp = (Button) findViewById(R.id.btn_signUp);
+        lgntxt = findViewById(R.id.lgntxt);
+        lgnb = findViewById(R.id.plz_lgn);
+        ee = findViewById(R.id.enteremail);
+        ep = findViewById(R.id.enterpass);
+        dhacc = findViewById(R.id.dhacc);
         mAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
 
@@ -90,6 +95,41 @@ public class LoginActivity extends AppCompatActivity {
 //
 //            }
 //        });
+        
+        lgnb.setTranslationY(300);
+        lgntxt.setTranslationY(300);
+        ee.setTranslationY(300);
+        ep.setTranslationY(300);
+        txtpassword.setTranslationY(300);
+        txtusername.setTranslationY(300);
+        tv_forgotpassword.setTranslationY(300);
+        dhacc.setTranslationY(300);
+        btnsignUp.setTranslationY(300);
+        btnlogin.setTranslationY(300);
+
+
+        lgntxt.setAlpha(v);
+        lgnb.setAlpha(v);
+        ee.setAlpha(v);
+        ep.setAlpha(v);
+        txtusername.setAlpha(v);
+        txtpassword.setAlpha(v);
+        tv_forgotpassword.setAlpha(v);
+        dhacc.setAlpha(v);
+        btnlogin.setAlpha(v);
+        btnsignUp.setAlpha(v);
+
+
+        lgntxt.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(200).start();
+        lgnb.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(200).start();
+        ee.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
+        txtusername.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
+        ep.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(600).start();
+        txtpassword.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(600).start();
+        dhacc.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(800).start();
+        tv_forgotpassword.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(800).start();
+        btnlogin.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(1000).start();
+        btnsignUp.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(1000).start();
 
         btnsignUp.setOnClickListener(new View.OnClickListener() {
             @Override
