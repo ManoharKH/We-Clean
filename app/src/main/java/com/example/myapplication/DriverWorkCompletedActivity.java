@@ -55,7 +55,7 @@ public class DriverWorkCompletedActivity extends AppCompatActivity implements Co
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_driver_home);
+        setContentView(R.layout.activity_driver_work_completed);
 
 
         getSupportActionBar().hide();
