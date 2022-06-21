@@ -8,7 +8,7 @@
     tools:context=".LoginActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/lgntxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login"
@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.082" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/plz_lgn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="please login to continue"
@@ -38,7 +38,7 @@
 
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/enteremail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Enter Email"
@@ -48,7 +48,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.118"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/plz_lgn"
         app:layout_constraintVertical_bias="0.07" />
 
     <EditText
@@ -70,11 +70,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.55"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/enteremail"
         app:layout_constraintVertical_bias="0.021" />
 
     <TextView
-        android:id="@+id/textView4"
+         android:id="@+id/enterpass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Enter Password"
@@ -106,7 +106,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.55"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/enterpass"
         app:layout_constraintVertical_bias="0.032" />
 
     <Button
@@ -146,11 +146,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/dhacc"
         app:layout_constraintVertical_bias="0.24" />
 
     <TextView
-        android:id="@+id/textView5"
+       android:id="@+id/dhacc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Don't have account?"
