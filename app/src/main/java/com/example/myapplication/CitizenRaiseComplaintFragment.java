@@ -478,7 +478,7 @@ public class CitizenRaiseComplaintFragment extends Fragment implements View.OnCl
 
             if(classes[maxPos].equals("Garbage"))
             {
-                if(maxConfidence>0.90) {
+                if(maxConfidence>0.50) {
                     Toast.makeText(getContext(), "Garbage detected, Raise complaint", Toast.LENGTH_LONG).show();
                     b = 1;
                 }

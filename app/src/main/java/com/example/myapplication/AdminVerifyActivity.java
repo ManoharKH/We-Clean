@@ -152,7 +152,7 @@ public class AdminVerifyActivity extends AppCompatActivity {
                 }else{
                     adminStatus = "Complaint Resolved";
                     citizenStatus = "Complaint Resolved";
-                    driverStatus = "Comaplaint Resolved";
+                    driverStatus = "Complaint Resolved";
                     fragmentID = 5;
                 }
                 Map<String,Object> map = new HashMap<>();
