@@ -49,6 +49,8 @@ public class CitizenHomeFragment extends Fragment {
     ImageView yimg, bimg, wclogo;
     int fragmentID = 3;
     int fragmentID1 = 2;
+    int duration = 500;
+    int delay_1 = 100,delay_2=200,delay_3=300,delay_4=400,delay_5=500;
 
 
     public CitizenHomeFragment() {
@@ -162,11 +164,11 @@ public class CitizenHomeFragment extends Fragment {
         wclogo.setAlpha(v);
         txtusername.setAlpha(v);
 
-        wct.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(200).start();
-        hlo.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(200).start();
-        rc.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
-        txtusername.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(600).start();
-        wclogo.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
+        wct.animate().translationY(0).alpha(1).setDuration(duration).setStartDelay(delay_1).start();
+        hlo.animate().translationY(0).alpha(1).setDuration(duration).setStartDelay(delay_1).start();
+        rc.animate().translationY(0).alpha(1).setDuration(duration).setStartDelay(delay_2).start();
+        txtusername.animate().translationY(0).alpha(1).setDuration(duration).setStartDelay(delay_2).start();
+        wclogo.animate().translationY(0).alpha(1).setDuration(duration).setStartDelay(delay_2).start();
 
         yel.setTranslationX(800);
         blck.setTranslationX(800);
@@ -190,16 +192,16 @@ public class CitizenHomeFragment extends Fragment {
         yimg.setAlpha(v);
         bimg.setAlpha(v);
 
-        yel.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(300).start();
-        raisec.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(300).start();
-        compraise.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(300).start();
-        btnraiseComplaint.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(300).start();
-        yimg.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(300).start();
-        blck.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(500).start();
-        myc.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(500).start();
-        compmy.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(500).start();
-        btnmyComplaint.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(500).start();
-        bimg.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(500).start();
+        yel.animate().translationX(0).alpha(1).setDuration(duration).setStartDelay(delay_1).start();
+        raisec.animate().translationX(0).alpha(1).setDuration(duration).setStartDelay(delay_2).start();
+        compraise.animate().translationX(0).alpha(1).setDuration(duration).setStartDelay(delay_3).start();
+        btnraiseComplaint.animate().translationX(0).alpha(1).setDuration(duration).setStartDelay(delay_3).start();
+        yimg.animate().translationX(0).alpha(1).setDuration(duration).setStartDelay(delay_3).start();
+        blck.animate().translationX(0).alpha(1).setDuration(duration).setStartDelay(delay_4).start();
+        myc.animate().translationX(0).alpha(1).setDuration(duration).setStartDelay(delay_4).start();
+        compmy.animate().translationX(0).alpha(1).setDuration(duration).setStartDelay(delay_5).start();
+        btnmyComplaint.animate().translationX(0).alpha(1).setDuration(duration).setStartDelay(delay_5).start();
+        bimg.animate().translationX(0).alpha(1).setDuration(duration).setStartDelay(delay_5).start();
 
 
 
