@@ -107,38 +107,42 @@ public class CitizenHomeFragment extends Fragment {
         rc = view.findViewById(R.id.rc);
         wclogo = view.findViewById(R.id.wclogo);
 
-        /*btnraiseComplaint.setOnClickListener(new View.OnClickListener() {
+        btnraiseComplaint.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent it = new Intent(getContext(),CitizenHomeActivity.class);
-                it.putExtra("fragmentId",fragmentID);
-                startActivity(it);
-            }
-        });
-         */
-        yel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent it = new Intent(getContext(),CitizenHomeActivity.class);
+                Intent it = new Intent(getContext(),CitizenHomeActivity.class)
+                        .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 it.putExtra("fragmentId",fragmentID);
                 startActivity(it);
             }
         });
 
-        /*btnmyComplaint.setOnClickListener(new View.OnClickListener() {
+        yel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent it = new Intent(getContext(),CitizenHomeActivity.class);
+                Intent it = new Intent(getContext(),CitizenHomeActivity.class)
+                        .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                it.putExtra("fragmentId",fragmentID);
+                startActivity(it);
+            }
+        });
+
+        btnmyComplaint.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent(getContext(),CitizenHomeActivity.class)
+                        .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 it.putExtra("fragmentId",fragmentID1);
                 startActivity(it);
             }
         });
-         */
+
 
         blck.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent it = new Intent(getContext(),CitizenHomeActivity.class);
+                Intent it = new Intent(getContext(),CitizenHomeActivity.class)
+                        .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 it.putExtra("fragmentId",fragmentID1);
                 startActivity(it);
             }

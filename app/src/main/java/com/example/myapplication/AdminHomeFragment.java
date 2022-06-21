@@ -182,7 +182,8 @@ public class AdminHomeFragment extends Fragment {
         pendC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it = new Intent(getContext(), AdminHomeActivity.class);
+                Intent it = new Intent(getContext(), AdminHomeActivity.class)
+                        .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 it.putExtra("fragmentId",2);
                 startActivity(it);
             }
@@ -191,7 +192,8 @@ public class AdminHomeFragment extends Fragment {
         addDriver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it = new Intent(getContext(), AdminHomeActivity.class);
+                Intent it = new Intent(getContext(), AdminHomeActivity.class)
+                        .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 it.putExtra("fragmentId",3);
                 startActivity(it);
             }
@@ -200,7 +202,8 @@ public class AdminHomeFragment extends Fragment {
         inprog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it = new Intent(getContext(), AdminHomeActivity.class);
+                Intent it = new Intent(getContext(), AdminHomeActivity.class)
+                        .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 it.putExtra("fragmentId",4);
                 startActivity(it);
             }
@@ -209,7 +212,8 @@ public class AdminHomeFragment extends Fragment {
         workC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it = new Intent(getContext(), AdminHomeActivity.class);
+                Intent it = new Intent(getContext(), AdminHomeActivity.class)
+                        .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 it.putExtra("fragmentId",5);
                 startActivity(it);
             }
@@ -218,12 +222,12 @@ public class AdminHomeFragment extends Fragment {
         resolvedC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it = new Intent(getContext(), AdminHomeActivity.class);
+                Intent it = new Intent(getContext(), AdminHomeActivity.class)
+                        .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 it.putExtra("fragmentId",6);
                 startActivity(it);
             }
         });
-
 
         return view;
     }
