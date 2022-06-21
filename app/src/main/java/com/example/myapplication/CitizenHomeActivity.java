@@ -177,7 +177,8 @@ public class CitizenHomeActivity extends AppCompatActivity {
                         //fragment = new CitizenMycomplaintFragment();
                         //loadFragment(fragment);
                         Intent it_my_cmp = new Intent(getApplicationContext(),CitizenHomeActivity.class);
-                        it_my_cmp.putExtra("fragmentId",fragmentID1);
+                        it_my_cmp.putExtra("fragmentId",fragmentID1)
+                                .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(it_my_cmp);
                         break;
 
@@ -185,12 +186,13 @@ public class CitizenHomeActivity extends AppCompatActivity {
                         //fragment = new CitizenRaiseComplaintFragment();
                         //loadFragment(fragment);
                         Intent it_raise_cmp = new Intent(getApplicationContext(),CitizenHomeActivity.class);
-                        it_raise_cmp.putExtra("fragmentId",fragmentID2);
+                        it_raise_cmp.putExtra("fragmentId",fragmentID2)
+                                .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(it_raise_cmp);
                         break;
 
                     case R.id.nav_reportbug:
-                        Intent sendmail = new Intent(Intent.ACTION_SEND);
+                        Intent sendmail = new Intent(Intent.ACTION_SEND).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         sendmail.setType("text/html");
                         sendmail.setPackage("com.google.android.gm"); //Added gmail package to forcefully open gmail app
                         sendmail.putExtra(Intent.EXTRA_EMAIL, new String[]{"weclean@gmail.com"});
@@ -204,7 +206,8 @@ public class CitizenHomeActivity extends AppCompatActivity {
 
                     case R.id.nav_profile:
                         Toast.makeText(CitizenHomeActivity.this, "User Details", Toast.LENGTH_SHORT).show();
-                        Intent it = new Intent(CitizenHomeActivity.this, ProfileActivity.class);
+                        Intent it = new Intent(CitizenHomeActivity.this, ProfileActivity.class)
+                                .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(it);
                         overridePendingTransition(0,0);
                         break;
@@ -212,7 +215,8 @@ public class CitizenHomeActivity extends AppCompatActivity {
                     case R.id.nav_logout:
                         Toast.makeText(CitizenHomeActivity.this, "User logged out", Toast.LENGTH_SHORT).show();
                         mAuth.signOut();
-                        Intent i = new Intent(CitizenHomeActivity.this, LoginActivity.class);
+                        Intent i = new Intent(CitizenHomeActivity.this, LoginActivity.class)
+                                .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(i);
                         finish();
                         return true;
@@ -221,7 +225,7 @@ public class CitizenHomeActivity extends AppCompatActivity {
                         break;
 
                     case R.id.nav_share:
-                        Intent shareintent = new Intent(Intent.ACTION_SEND);
+                        Intent shareintent = new Intent(Intent.ACTION_SEND).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         shareintent.setType("text/plain");
                         shareintent.putExtra(Intent.EXTRA_SUBJECT, "WeClean App");
                         shareintent.putExtra(Intent.EXTRA_TEXT,"https://drive.google.com/drive/folders/1md3HcgJRw5Qfz5D0QN-xvr6gh7VHnQMl");

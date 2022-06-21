@@ -9,8 +9,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
+
+import com.google.android.material.imageview.ShapeableImageView;
 
 import soup.neumorphism.NeumorphCardView;
 
@@ -34,7 +37,7 @@ public class AdminHomeFragment extends Fragment {
    
     private TextView wc, pt, pt2, at, at2, it, it2, wt,wt2, rt, rt2;
     private ShapeableImageView pi, ai, wi, ii, ri;
-    int fragmentId = 1;
+    int fragmentId = 1,duration=500 ,delay_1 = 100,delay_2 = 200,delay_3 = 300,delay_4 = 400,delay_5 = 500;
     private float v = 0;
 
     public AdminHomeFragment() {
@@ -153,27 +156,27 @@ public class AdminHomeFragment extends Fragment {
 
 
 
-        wc.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(200).start();
-        pendC.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(200).start();
-        pi.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(200).start();
-        pt.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(200).start();
-        pt2.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(200).start();
-        addDriver.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
-        ai.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
-        at.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
-        at2.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
-        inprog.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(600).start();
-        ii.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(600).start();
-        it.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(600).start();
-        it2.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(600).start();
-        workC.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(800).start();
-        wi.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(800).start();
-        wt.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(800).start();
-        wt2.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(800).start();
-        resolvedC.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(1000).start();
-        ri.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(1000).start();
-        rt.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(1000).start();
-        rt2.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(1000).start();
+        wc.animate().translationY(0).alpha(1).setDuration(duration).setStartDelay(delay_1).start();
+        pendC.animate().translationY(0).alpha(1).setDuration(duration).setStartDelay(delay_1).start();
+        pi.animate().translationY(0).alpha(1).setDuration(duration).setStartDelay(delay_1).start();
+        pt.animate().translationY(0).alpha(1).setDuration(duration).setStartDelay(delay_1).start();
+        pt2.animate().translationY(0).alpha(1).setDuration(duration).setStartDelay(delay_2).start();
+        addDriver.animate().translationY(0).alpha(1).setDuration(duration).setStartDelay(delay_2).start();
+        ai.animate().translationY(0).alpha(1).setDuration(duration).setStartDelay(delay_2).start();
+        at.animate().translationY(0).alpha(1).setDuration(duration).setStartDelay(delay_2).start();
+        at2.animate().translationY(0).alpha(1).setDuration(duration).setStartDelay(delay_2).start();
+        inprog.animate().translationY(0).alpha(1).setDuration(duration).setStartDelay(delay_3).start();
+        ii.animate().translationY(0).alpha(1).setDuration(duration).setStartDelay(delay_3).start();
+        it.animate().translationY(0).alpha(1).setDuration(duration).setStartDelay(delay_3).start();
+        it2.animate().translationY(0).alpha(1).setDuration(duration).setStartDelay(delay_3).start();
+        workC.animate().translationY(0).alpha(1).setDuration(duration).setStartDelay(delay_4).start();
+        wi.animate().translationY(0).alpha(1).setDuration(duration).setStartDelay(delay_4).start();
+        wt.animate().translationY(0).alpha(1).setDuration(duration).setStartDelay(delay_4).start();
+        wt2.animate().translationY(0).alpha(1).setDuration(duration).setStartDelay(delay_4).start();
+        resolvedC.animate().translationY(0).alpha(1).setDuration(duration).setStartDelay(delay_5).start();
+        ri.animate().translationY(0).alpha(1).setDuration(duration).setStartDelay(delay_5).start();
+        rt.animate().translationY(0).alpha(1).setDuration(duration).setStartDelay(delay_5).start();
+        rt2.animate().translationY(0).alpha(1).setDuration(duration).setStartDelay(delay_5).start();
 
 
         pendC.setOnClickListener(new View.OnClickListener() {

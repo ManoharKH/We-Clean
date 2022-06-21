@@ -84,27 +84,33 @@ public class DriverUnderVerificationActivity extends AppCompatActivity implement
 
                     case R.id.nav_driver_home:
                         startActivity(new Intent(DriverUnderVerificationActivity.this,DriverHomeActivity.class));
+                        finish();
                         break;
 
                     case R.id.nav_driver_under_verification:
                         startActivity(new Intent(DriverUnderVerificationActivity.this,DriverUnderVerificationActivity.class).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP));
+                        finish();
                         break;
 
                     case R.id.nav_driver_work_completed:
                         startActivity(new Intent(DriverUnderVerificationActivity.this,DriverWorkCompletedActivity.class));
+                        finish();
                         break;
 
                     case R.id.nav_driver_profile:
                         Toast.makeText(DriverUnderVerificationActivity.this, "Driver Details", Toast.LENGTH_SHORT).show();
                         Intent it = new Intent(DriverUnderVerificationActivity.this, ProfileActivity.class);
                         startActivity(it);
+                        finish();
                         overridePendingTransition(0,0);
                         break;
 
                     case R.id.nav_driver_logout:
                         Toast.makeText(DriverUnderVerificationActivity.this, "Driver logged out", Toast.LENGTH_SHORT).show();
                         mAuth.signOut();
-                        Intent i = new Intent(DriverUnderVerificationActivity.this,LoginActivity.class);
+                        Intent i = new Intent(DriverUnderVerificationActivity.this,LoginActivity.class)
+                                .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         startActivity(i);
                         finish();
                         return true;

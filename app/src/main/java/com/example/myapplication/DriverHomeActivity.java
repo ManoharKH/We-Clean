@@ -92,6 +92,12 @@ public class DriverHomeActivity extends AppCompatActivity implements ComplaintDr
 
                     case R.id.nav_driver_under_verification:
                         startActivity(new Intent(DriverHomeActivity.this,DriverUnderVerificationActivity.class));
+
+//                        Intent under_ver_it = new Intent(DriverHomeActivity.this,DriverUnderVerificationActivity.class);
+//                        under_ver_it.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+//                        under_ver_it.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                        startActivity(under_ver_it);
+
                         break;
 
                     case R.id.nav_driver_work_completed:
@@ -108,7 +114,9 @@ public class DriverHomeActivity extends AppCompatActivity implements ComplaintDr
                     case R.id.nav_driver_logout:
                         Toast.makeText(DriverHomeActivity.this, "Driver logged out", Toast.LENGTH_SHORT).show();
                         mAuth.signOut();
-                        Intent i = new Intent(DriverHomeActivity.this,LoginActivity.class);
+                        Intent i = new Intent(DriverHomeActivity.this,LoginActivity.class)
+                                .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         startActivity(i);
                         finish();
                         return true;

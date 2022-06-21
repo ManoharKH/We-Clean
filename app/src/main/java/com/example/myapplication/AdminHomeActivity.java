@@ -156,7 +156,8 @@ public class AdminHomeActivity extends AppCompatActivity {
                     case R.id.nav_pend_cmp:
                         //fragment = new AdminPendingComplaintFragment();
                         //loadFragment(fragment);
-                        Intent it_pend_cmp = new Intent(getApplicationContext(),AdminHomeActivity.class);
+                        Intent it_pend_cmp = new Intent(getApplicationContext(),AdminHomeActivity.class)
+                                .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         it_pend_cmp.putExtra("fragmentId",fragmentID1);
                         startActivity(it_pend_cmp);
 
@@ -166,7 +167,8 @@ public class AdminHomeActivity extends AppCompatActivity {
                         //fragment = new AddDriverToComplaintFragment();
                         //loadFragment(fragment);
 
-                        Intent it_add_driver = new Intent(getApplicationContext(),AdminHomeActivity.class);
+                        Intent it_add_driver = new Intent(getApplicationContext(),AdminHomeActivity.class)
+                                .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         it_add_driver.putExtra("fragmentId",fragmentID2);
                         startActivity(it_add_driver);
                         break;
@@ -174,13 +176,15 @@ public class AdminHomeActivity extends AppCompatActivity {
                     case R.id.nav_in_progress:
                         //fragment = new AdminWorkInProgressFragment();
                         //loadFragment(fragment);
-                        Intent it_in_progress = new Intent(getApplicationContext(),AdminHomeActivity.class);
+                        Intent it_in_progress = new Intent(getApplicationContext(),AdminHomeActivity.class)
+                                .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         it_in_progress.putExtra("fragmentId",fragmentID3);
                         startActivity(it_in_progress);
                         break;
 
                     case R.id.nav_work_cmp:
-                        Intent it_work_cmp = new Intent(getApplicationContext(),AdminHomeActivity.class);
+                        Intent it_work_cmp = new Intent(getApplicationContext(),AdminHomeActivity.class)
+                                .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         it_work_cmp.putExtra("fragmentId",fragmentID4);
                         startActivity(it_work_cmp);
                         break;
@@ -188,14 +192,16 @@ public class AdminHomeActivity extends AppCompatActivity {
                     case R.id.nav_resolved_comp:
                         //fragment = new AdminResolvedComplaintFragment();
                         //loadFragment(fragment);
-                        Intent it_resolved_comp = new Intent(getApplicationContext(),AdminHomeActivity.class);
+                        Intent it_resolved_comp = new Intent(getApplicationContext(),AdminHomeActivity.class)
+                                .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         it_resolved_comp.putExtra("fragmentId",fragmentID5);
                         startActivity(it_resolved_comp);
                         break;
 
                     case R.id.nav_admin_profile:
                         Toast.makeText(AdminHomeActivity.this, "Admin Details", Toast.LENGTH_SHORT).show();
-                        Intent it = new Intent(AdminHomeActivity.this, ProfileActivity.class);
+                        Intent it = new Intent(AdminHomeActivity.this, ProfileActivity.class)
+                                .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(it);
                         overridePendingTransition(0,0);
                         break;
@@ -203,7 +209,8 @@ public class AdminHomeActivity extends AppCompatActivity {
                     case R.id.nav_admin_logout:
                         Toast.makeText(AdminHomeActivity.this, "Admin logged out", Toast.LENGTH_SHORT).show();
                         mAuth.signOut();
-                        Intent i = new Intent(AdminHomeActivity.this,LoginActivity.class);
+                        Intent i = new Intent(AdminHomeActivity.this,LoginActivity.class)
+                                .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(i);
                         finish();
                         return true;
@@ -212,7 +219,8 @@ public class AdminHomeActivity extends AppCompatActivity {
                         break;
 
                     case R.id.nav_share:
-                        Intent shareintent = new Intent(Intent.ACTION_SEND);
+                        Intent shareintent = new Intent(Intent.ACTION_SEND)
+                                .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         shareintent.setType("text/plain");
                         shareintent.putExtra(Intent.EXTRA_SUBJECT, "WeClean App");
                         shareintent.putExtra(Intent.EXTRA_TEXT,"https://drive.google.com/drive/folders/1md3HcgJRw5Qfz5D0QN-xvr6gh7VHnQMl");
@@ -221,13 +229,9 @@ public class AdminHomeActivity extends AppCompatActivity {
 
                     default:
                         return true;
-
-
                 }
-
                 item.setChecked(true);
                 drawerLayout.closeDrawers();
-
 
                 return true;
             }

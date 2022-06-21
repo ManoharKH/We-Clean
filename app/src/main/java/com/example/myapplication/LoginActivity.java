@@ -121,16 +121,16 @@ public class LoginActivity extends AppCompatActivity {
         btnsignUp.setAlpha(v);
 
 
-        lgntxt.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(200).start();
-        lgnb.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(200).start();
-        ee.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
-        txtusername.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
-        ep.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(600).start();
-        txtpassword.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(600).start();
-        dhacc.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(800).start();
-        tv_forgotpassword.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(800).start();
-        btnlogin.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(1000).start();
-        btnsignUp.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(1000).start();
+        lgntxt.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(100).start();
+        lgnb.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(100).start();
+        ee.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(200).start();
+        txtusername.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(200).start();
+        ep.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(300).start();
+        txtpassword.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(300).start();
+        dhacc.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(400).start();
+        tv_forgotpassword.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(400).start();
+        btnlogin.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(500).start();
+        btnsignUp.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(500).start();
 
         btnsignUp.setOnClickListener(new View.OnClickListener() {
             @Override
