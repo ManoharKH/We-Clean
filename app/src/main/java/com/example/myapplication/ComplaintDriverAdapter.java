@@ -36,6 +36,7 @@ public class ComplaintDriverAdapter extends RecyclerView.Adapter<ComplaintDriver
         holder.txtaddress.setText(""+complaint.getAddress());
         holder.txtlatitide.setText("Latitude - "+complaint.getLattitude());
         holder.txtlongitude.setText("Longitude - "+ complaint.getLongitude());
+        holder.txtdriverStatus.setText("Status : "+ complaint.getDriverStatus());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,13 +53,14 @@ public class ComplaintDriverAdapter extends RecyclerView.Adapter<ComplaintDriver
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        private TextView txtaddress,txtlatitide,txtlongitude;
+        private TextView txtaddress,txtlatitide,txtlongitude,txtdriverStatus;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             txtaddress = itemView.findViewById(R.id.txt_complaintaddress);
             txtlatitide = itemView.findViewById(R.id.txt_latitute);
             txtlongitude = itemView.findViewById(R.id.txt_longitude);
+            txtdriverStatus = itemView.findViewById(R.id.txt_driverStatus);
 
         }
     }

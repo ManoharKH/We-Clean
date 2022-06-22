@@ -7,6 +7,12 @@
     tools:context=".ProfileActivity"
     android:background="@color/white">
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="30dp"
+    android:padding="20dp">
 
     <TextView
         android:id="@+id/textView1"
@@ -15,13 +21,9 @@
         android:fontFamily="@font/baloo"
         android:text="Personal Details"
         android:textColor="@color/black"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.283"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.168" />
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="50dp"/>
 
     <TextView
         android:id="@+id/txt_tvusername"
@@ -29,13 +31,8 @@
         android:layout_height="wrap_content"
         android:text="Username"
         android:textColor="@color/black"
-        android:textSize="@dimen/_14sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.173"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView1"
-        app:layout_constraintVertical_bias="0.091" />
+        android:textSize="@dimen/_16sdp"
+        android:layout_marginBottom="5dp"/>
 
     <TextView
         android:id="@+id/txt_username"
@@ -44,12 +41,7 @@
         android:textAlignment="textStart"
         android:textColor="@color/black"
         android:textSize="@dimen/_14sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.603"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_tvusername"
-        app:layout_constraintVertical_bias="0.034" />
+        android:layout_marginBottom="20dp"/>
 
     <TextView
         android:id="@+id/txt_tvmobileno"
@@ -57,13 +49,8 @@
         android:layout_height="wrap_content"
         android:text="Mobile number"
         android:textColor="@color/black"
-        android:textSize="@dimen/_14sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.197"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_username"
-        app:layout_constraintVertical_bias="0.07" />
+        android:textSize="@dimen/_16sdp"
+        android:layout_marginBottom="5dp"/>
 
     <TextView
         android:id="@+id/txt_mobilenumber"
@@ -72,12 +59,7 @@
         android:textAlignment="textStart"
         android:textColor="@color/black"
         android:textSize="@dimen/_14sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.603"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_tvmobileno"
-        app:layout_constraintVertical_bias="0.053" />
+        android:layout_marginBottom="20dp"/>
 
     <TextView
         android:id="@+id/txt_tvnoofcomplaint"
@@ -85,13 +67,9 @@
         android:layout_height="wrap_content"
         android:text="Total Complaints"
         android:textColor="@color/black"
-        android:textSize="@dimen/_14sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.209"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_mobilenumber"
-        app:layout_constraintVertical_bias="0.1" />
+        android:textSize="@dimen/_16sdp"
+        android:layout_marginBottom="5dp"
+        android:visibility="gone"/>
 
     <TextView
         android:id="@+id/txt_noofcomplaint"
@@ -100,12 +78,8 @@
         android:textAlignment="textStart"
         android:textColor="@color/black"
         android:textSize="@dimen/_14sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.603"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_tvnoofcomplaint"
-        app:layout_constraintVertical_bias="0.076" />
+        android:layout_marginBottom="20dp"
+        android:visibility="gone"/>
 
     <TextView
         android:id="@+id/txt_tvcategory"
@@ -113,13 +87,8 @@
         android:layout_height="wrap_content"
         android:text="Category"
         android:textColor="@color/black"
-        android:textSize="@dimen/_14sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.168"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_noofcomplaint"
-        app:layout_constraintVertical_bias="0.168" />
+        android:textSize="@dimen/_16sdp"
+        android:layout_marginBottom="5dp"/>
 
     <TextView
         android:id="@+id/txt_category"
@@ -128,10 +97,8 @@
         android:textAlignment="textStart"
         android:textColor="@color/black"
         android:textSize="@dimen/_14sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.603"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_tvcategory"
-        app:layout_constraintVertical_bias="0.161" />
+        android:layout_marginBottom="20dp"/>
+
+</LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

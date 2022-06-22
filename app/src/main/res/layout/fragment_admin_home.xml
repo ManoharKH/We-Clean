@@ -74,11 +74,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="@dimen/_15sdp">
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    android:paddingVertical="@dimen/_10sdp">
 
                     <com.google.android.material.imageview.ShapeableImageView
                         android:layout_width="88dp"
                         android:layout_height="88dp"
+                        android:layout_marginStart="8dp"
                         android:src="@drawable/pending_complogo"
                         app:shapeAppearanceOverlay="@style/Circular"
                         android:scaleType="centerCrop"
@@ -98,9 +100,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_4sdp"
-                        android:text="Verify user's complaint.."
+                        android:text="Verify user's complaint."
                         android:textColor="@color/sec_text"
-                        android:id="@+id/pt2"      
+                        android:id="@+id/pt2"
                         android:textSize="@dimen/_10sdp" />
 
 
@@ -130,11 +132,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="@dimen/_15sdp">
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    android:paddingVertical="@dimen/_10sdp">
 
                     <com.google.android.material.imageview.ShapeableImageView
                         android:layout_width="88dp"
                         android:layout_height="88dp"
+                        android:layout_marginStart="8dp"
                         android:src="@drawable/adddriver"
                         app:shapeAppearanceOverlay="@style/Circular"
                         android:id="@+id/ai"                                                      
@@ -144,7 +148,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_4sdp"
-                        android:text="Adding the Driver"
+                        android:text="Add Driver"
                         android:textColor="@color/prim_text"
                         android:textSize="@dimen/_14sdp"
                         android:id="@+id/at"      
@@ -155,7 +159,7 @@
                         android:id="@+id/at2"      
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_4sdp"
-                        android:text="To carry out work.."
+                        android:text="To carry out work."
                         android:textColor="@color/sec_text"
                         android:textSize="@dimen/_10sdp" />
 
@@ -185,11 +189,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="@dimen/_15sdp">
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    android:paddingVertical="@dimen/_10sdp">
 
                     <com.google.android.material.imageview.ShapeableImageView
-                        android:layout_width="90dp"
-                        android:layout_height="90dp"
+                        android:layout_width="88dp"
+                        android:layout_height="88dp"
+                        android:layout_marginStart="8dp"
                         android:src="@drawable/inprogress2"
                         app:shapeAppearanceOverlay="@style/Circ1"
                         android:id="@+id/ii"                                                      
@@ -209,7 +215,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_4sdp"
-                        android:text="Cleaning going on.."
+                        android:text="Cleaning going on."
                         android:textColor="@color/sec_text"
                         android:id="@+id/it2"      
                         android:textSize="@dimen/_10sdp" />
@@ -241,11 +247,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="@dimen/_15sdp">
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    android:paddingVertical="@dimen/_10sdp">
 
                     <com.google.android.material.imageview.ShapeableImageView
                         android:layout_width="88dp"
                         android:layout_height="88dp"
+                        android:layout_marginStart="8dp"
                         android:src="@drawable/workcompleted"
                         app:shapeAppearanceOverlay="@style/Circular"
                         android:id="@+id/wi"                                                      
@@ -265,7 +273,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_4sdp"
-                        android:text="Waste has been cleared.."
+                        android:text="Waste has been cleared."
                         android:textColor="@color/sec_text"
                         android:id="@+id/wt2"      
                         android:textSize="@dimen/_10sdp" />
@@ -298,11 +306,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="@dimen/_15sdp">
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    android:paddingVertical="@dimen/_10sdp">
 
                     <com.google.android.material.imageview.ShapeableImageView
                         android:layout_width="88dp"
                         android:layout_height="88dp"
+                        android:layout_marginStart="8dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/resolvecomp"
                         android:id="@+id/ri"                                                      
@@ -415,7 +425,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_8sdp"
                         android:layout_marginEnd="@dimen/_8sdp"
-                        android:layout_marginBottom="16dp"
+                        android:layout_marginBottom="10dp"
                         android:text="Complaints Report"
                         android:textColor="@color/prim_text"
                         android:textSize="@dimen/_14sdp"
@@ -431,7 +441,7 @@
                         android:layout_marginStart="@dimen/_8sdp"
                         android:layout_marginTop="@dimen/_2sdp"
                         android:layout_marginEnd="@dimen/_8sdp"
-                        android:text="through the piechart"
+                        android:text="View Piechart"
                         android:textColor="@color/sec_text"
                         android:textSize="@dimen/_13sdp"
                         app:layout_constraintEnd_toStartOf="@id/cardright"

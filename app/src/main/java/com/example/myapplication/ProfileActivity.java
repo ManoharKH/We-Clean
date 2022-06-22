@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -19,7 +20,7 @@ import java.util.Objects;
 
 public class ProfileActivity extends AppCompatActivity {
 
-    private TextView txtusername,txtmob,txtcategory,txtnumberOfComaints;
+    private TextView txtusername,txtmob,txtcategory,txtnumberOfComaints,txttvnoOfComaplaints;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     FirebaseAuth mAuth;
@@ -37,6 +38,7 @@ public class ProfileActivity extends AppCompatActivity {
         txtmob = (TextView) findViewById(R.id.txt_mobilenumber);
         txtcategory = (TextView) findViewById(R.id.txt_category);
         txtnumberOfComaints = (TextView) findViewById(R.id.txt_noofcomplaint);
+        txttvnoOfComaplaints = (TextView) findViewById(R.id.txt_tvnoofcomplaint);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference();
@@ -55,9 +57,15 @@ public class ProfileActivity extends AppCompatActivity {
                 // find user with userID
                 DataSnapshot currentUser = snapshot.child(userID);
 
+                String userCategory = currentUser.child("category").getValue(String.class);
                 txtusername.setText(currentUser.child("username").getValue(String.class));
                 txtmob.setText(currentUser.child("mobile").getValue(String.class));
-                txtcategory.setText(currentUser.child("category").getValue(String.class));
+                txtcategory.setText(userCategory);
+
+                if (userCategory.equals("Citizen")){
+                    txttvnoOfComaplaints.setVisibility(View.VISIBLE);
+                    txtnumberOfComaints.setVisibility(View.VISIBLE);
+                }
             }
 
             @Override

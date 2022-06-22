@@ -3,11 +3,39 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/activity_add_driver_to_complaint.xml" value="0.253125" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/activity_admin_home.xml" value="0.18981481481481483" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/activity_admin_verify.xml" value="0.18981481481481483" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/activity_citizen_home.xml" value="0.253125" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/activity_driver_home.xml" value="0.18981481481481483" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/activity_driver_under_verification.xml" value="0.18981481481481483" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/activity_driver_work_completed.xml" value="0.18981481481481483" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/activity_login.xml" value="0.19814814814814816" />
-        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/activity_profile.xml" value="0.253125" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/activity_profile.xml" value="0.2" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/adding_driver.xml" value="0.253125" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/admin_header.xml" value="0.253125" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/complaint_admin_item.xml" value="0.18981481481481483" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/complaint_citizen_item.xml" value="0.18981481481481483" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/complaint_driver_item.xml" value="0.18981481481481483" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/driver_update.xml" value="0.253125" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/fragment_admin_home.xml" value="0.253125" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/fragment_admin_pending_complaint.xml" value="0.253125" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/fragment_citizen_home.xml" value="0.22685185185185186" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/fragment_citizen_mycomplaint.xml" value="0.253125" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/header.xml" value="0.253125" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/in_progress.xml" value="0.253125" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/pend_comp.xml" value="0.253125" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/pie_tool.xml" value="0.253125" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/resolved_comp.xml" value="0.253125" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/style_spinner_adddriver.xml" value="0.253125" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/toolbar.xml" value="0.18981481481481483" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/toolbar_comp.xml" value="0.253125" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/toolbar_raisecomp.xml" value="0.253125" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/toolbar_under_verification.xml" value="0.253125" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/toolbar_work_completed.xml" value="0.253125" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/verify.xml" value="0.253125" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/layout/work_comp.xml" value="0.253125" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/We-Clean-manoharGithub/app/src/main/res/menu/admin_menu.xml" value="0.253125" />
         <entry key="..\:/college/Main Project/Final code/MyApplication1_naga2/MyApplication1/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.14635416666666667" />
         <entry key="..\:/college/Main Project/Final code/MyApplication1_naga2/MyApplication1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.14635416666666667" />
         <entry key="..\:/college/Main Project/Final code/MyApplication1_naga2/MyApplication1/app/src/main/res/font/chau_philomene_one.xml" value="0.16041666666666668" />
