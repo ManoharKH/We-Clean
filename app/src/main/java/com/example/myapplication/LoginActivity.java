@@ -143,11 +143,11 @@ public class LoginActivity extends AppCompatActivity {
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                loading.show();
                 String username = txtusername.getText().toString().trim();
                 String password = txtpassword.getText().toString().trim();
 
                 if(!username.isEmpty() && !password.isEmpty()){
+                    loading.show();
                     mAuth.signInWithEmailAndPassword(username,password)
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override

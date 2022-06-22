@@ -201,8 +201,6 @@ public class CitizenHomeActivity extends AppCompatActivity {
                         startActivity(sendmail);
                         break;
 
-                    case R.id.nav_privacy:
-                        break;
 
                     case R.id.nav_profile:
                         Toast.makeText(CitizenHomeActivity.this, "User Details", Toast.LENGTH_SHORT).show();
@@ -221,8 +219,6 @@ public class CitizenHomeActivity extends AppCompatActivity {
                         finish();
                         return true;
 
-                    case R.id.nav_rate:
-                        break;
 
                     case R.id.nav_share:
                         Intent shareintent = new Intent(Intent.ACTION_SEND).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

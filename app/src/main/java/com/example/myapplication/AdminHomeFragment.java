@@ -84,6 +84,7 @@ public class AdminHomeFragment extends Fragment {
         resolvedC = view.findViewById(R.id.resolved_comp);
         cardRight = view.findViewById(R.id.cardright);
         wc = view.findViewById(R.id.txtweclean);
+
         pi = view.findViewById(R.id.pi);
         pt = view.findViewById(R.id.pt);
         pt2 =view.findViewById(R.id.pt2);

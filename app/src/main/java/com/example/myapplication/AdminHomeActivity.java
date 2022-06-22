@@ -215,9 +215,6 @@ public class AdminHomeActivity extends AppCompatActivity {
                         finish();
                         return true;
 
-                    case R.id.nav_rate:
-                        break;
-
                     case R.id.nav_share:
                         Intent shareintent = new Intent(Intent.ACTION_SEND)
                                 .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

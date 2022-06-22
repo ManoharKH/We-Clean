@@ -23,11 +23,7 @@
 
 
 
-        <item android:title="@string/privacy"
-            android:id="@+id/nav_privacy"
-            android:icon="@drawable/ic_privacy"
 
-            />
 
 
 
@@ -55,9 +51,6 @@
 
         <item android:title="Communicate">
             <menu>
-                <item android:id="@+id/nav_rate"
-                    android:title="@string/Rate"
-                    android:icon="@drawable/ic_rate"/>
 
                 <item android:title="@string/Share"
                     android:id="@+id/nav_share"
