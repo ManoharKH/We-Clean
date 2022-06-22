@@ -149,8 +149,13 @@ public class AdminHomeActivity extends AppCompatActivity {
                 Fragment fragment = null;
                 switch (item.getItemId()){
                     case R.id.nav_home:
-                        fragment =new AdminHomeFragment();
-                        loadFragment(fragment);
+                        //fragment =new AdminHomeFragment();
+                        //loadFragment(fragment);
+                        Intent it_home = new Intent(getApplicationContext(),AdminHomeActivity.class)
+                                .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        it_home.putExtra("fragmentId",fragmentID);
+                        startActivity(it_home);
+
                         break;
 
                     case R.id.nav_pend_cmp:
