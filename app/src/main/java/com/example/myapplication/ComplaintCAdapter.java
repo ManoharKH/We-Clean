@@ -36,6 +36,7 @@ public class ComplaintCAdapter extends RecyclerView.Adapter<ComplaintCAdapter.Vi
         holder.txtaddress.setText(""+complaint.getAddress());
         holder.txtlatitide.setText("Latitude - "+complaint.getLattitude());
         holder.txtlongitude.setText("Longitude - "+ complaint.getLongitude());
+        holder.txtdateofcomplaint.setText("Date : "+complaint.getDateofComplaint());
         holder.txtcitizenStatus.setText("Status : "+complaint.getCitizenStatus());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -54,7 +55,7 @@ public class ComplaintCAdapter extends RecyclerView.Adapter<ComplaintCAdapter.Vi
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView txtaddress,txtlatitide,txtlongitude,txtcitizenStatus;
+        private TextView txtaddress,txtlatitide,txtlongitude,txtdateofcomplaint,txtcitizenStatus;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -62,6 +63,7 @@ public class ComplaintCAdapter extends RecyclerView.Adapter<ComplaintCAdapter.Vi
             txtaddress = itemView.findViewById(R.id.txt_complaintaddress);
             txtlatitide = itemView.findViewById(R.id.txt_latitute);
             txtlongitude = itemView.findViewById(R.id.txt_longitude);
+            txtdateofcomplaint = itemView.findViewById(R.id.txt_date);
             txtcitizenStatus = itemView.findViewById(R.id.txt_citizenStatus);
         }
     }

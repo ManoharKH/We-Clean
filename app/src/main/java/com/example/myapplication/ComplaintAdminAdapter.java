@@ -37,6 +37,7 @@ public class ComplaintAdminAdapter extends RecyclerView.Adapter<ComplaintAdminAd
         holder.txtaddress.setText("" + complaint.getAddress());
         holder.txtlatitude.setText("Latitude - " + complaint.getLattitude());
         holder.txtlongitude.setText("Longitude - " + complaint.getLongitude());
+        holder.txtdate.setText("Date : "+complaint.getDateofComplaint());
         holder.txtadminStatus.setText("Status : " + complaint.getAdminStatus());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -54,7 +55,7 @@ public class ComplaintAdminAdapter extends RecyclerView.Adapter<ComplaintAdminAd
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView txtaddress,txtlatitude,txtlongitude,txtadminStatus;
+        private TextView txtaddress,txtlatitude,txtlongitude,txtdate,txtadminStatus;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -62,6 +63,7 @@ public class ComplaintAdminAdapter extends RecyclerView.Adapter<ComplaintAdminAd
             txtaddress = itemView.findViewById(R.id.txt_complaintaddress);
             txtlatitude = itemView.findViewById(R.id.txt_latitute);
             txtlongitude = itemView.findViewById(R.id.txt_longitude);
+            txtdate = itemView.findViewById(R.id.txt_date);
             txtadminStatus = itemView.findViewById(R.id.txt_adminStatus);
         }
     }
