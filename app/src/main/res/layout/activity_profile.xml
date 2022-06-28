@@ -5,51 +5,73 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProfileActivity"
-    android:background="@color/white">
+    android:background="@color/backgrnd">
 
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="30dp"
-    android:padding="20dp">
+    >
 
-    <TextView
+    <include
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        layout="@layout/profile"/>
+
+    <soup.neumorphism.NeumorphTextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/baloo"
         android:text="Personal Details"
-        android:textColor="@color/black"
+        android:textColor="@color/prim_text"
+        android:paddingLeft="@dimen/_20sdp"
+        app:neumorph_shadowColorDark="@color/dark_shadow"
         android:textSize="30dp"
+        app:neumorph_shadowColorLight="@color/light_shadow"
+        app:neumorph_shadowElevation="@dimen/_6sdp"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="50dp"/>
+        android:layout_marginBottom="50dp"
+        />
 
     <TextView
         android:id="@+id/txt_tvusername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Username"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_16sdp"
-        android:layout_marginBottom="5dp"/>
+        android:text=" Username :"
+        android:textColor="@color/prim_text"
+        android:fontFamily="@font/chau_philomene_one"
+        android:textStyle="bold"
+        android:textSize="@dimen/_18sdp"
+        android:layout_marginBottom="5dp"
+        android:paddingLeft="@dimen/_20sdp"
+        android:drawableStart="@drawable/ic_person"
+        />
 
     <TextView
         android:id="@+id/txt_username"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:textAlignment="textStart"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_14sdp"
-        android:layout_marginBottom="20dp"/>
+        android:textColor="@color/prim_text"
+        android:textSize="@dimen/_18sdp"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="@dimen/_35sdp"
+        android:fontFamily="@font/chau_philomene_one"
+        android:textStyle="italic"
+        android:drawableStart="@drawable/ic_arr"/>
 
     <TextView
         android:id="@+id/txt_tvmobileno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mobile number"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_16sdp"
+        android:text=" Mobile number :"
+        android:drawableStart="@drawable/ic_phone"
+        android:textColor="@color/prim_text"
+        android:fontFamily="@font/chau_philomene_one"
+        android:textStyle="bold"
+        android:textSize="@dimen/_18sdp"
+        android:paddingLeft="@dimen/_20sdp"
         android:layout_marginBottom="5dp"/>
 
     <TextView
@@ -57,19 +79,26 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:textAlignment="textStart"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_14sdp"
-        android:layout_marginBottom="20dp"/>
+        android:textColor="@color/prim_text"
+        android:textSize="@dimen/_18sdp"
+        android:paddingLeft="@dimen/_35sdp"
+        android:fontFamily="@font/chau_philomene_one"
+        android:layout_marginBottom="20dp"
+        android:drawableStart="@drawable/ic_arr"/>
 
     <TextView
         android:id="@+id/txt_tvnoofcomplaint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Total Complaints"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_16sdp"
+        android:text=" Total Complaints :"
+        android:textColor="@color/prim_text"
+        android:fontFamily="@font/chau_philomene_one"
+        android:textStyle="bold"
+        android:textSize="@dimen/_18sdp"
         android:layout_marginBottom="5dp"
-        android:visibility="gone"/>
+        android:paddingLeft="@dimen/_20sdp"
+        android:visibility="gone"
+        android:drawableStart="@drawable/ic_comp"/>
 
     <TextView
         android:id="@+id/txt_noofcomplaint"
@@ -77,27 +106,39 @@
         android:layout_height="wrap_content"
         android:textAlignment="textStart"
         android:textColor="@color/black"
-        android:textSize="@dimen/_14sdp"
+        android:textSize="@dimen/_18sdp"
         android:layout_marginBottom="20dp"
-        android:visibility="gone"/>
+        android:textStyle="italic"
+        android:paddingLeft="@dimen/_35sdp"
+        android:visibility="gone"
+        android:drawableStart="@drawable/ic_arr"/>
 
     <TextView
         android:id="@+id/txt_tvcategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Category"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_16sdp"
-        android:layout_marginBottom="5dp"/>
+        android:text=" Category :"
+        android:textColor="@color/prim_text"
+        android:fontFamily="@font/chau_philomene_one"
+        android:textStyle="bold"
+        android:textSize="@dimen/_18sdp"
+        android:layout_marginBottom="5dp"
+        android:paddingLeft="@dimen/_20sdp"
+        android:drawableStart="@drawable/ic_category"
+        />
 
     <TextView
         android:id="@+id/txt_category"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:textAlignment="textStart"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_14sdp"
-        android:layout_marginBottom="20dp"/>
+        android:textColor="@color/prim_text"
+        android:textSize="@dimen/_18sdp"
+        android:fontFamily="@font/chau_philomene_one"
+        android:textStyle="italic"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="@dimen/_35sdp"
+        android:drawableStart="@drawable/ic_arr"/>
 
 </LinearLayout>
 
