@@ -10,11 +10,11 @@
 
                 <item android:id="@+id/nav_driver_under_verification"
                     android:title="@string/under_verification"
-                    android:icon="@drawable/ic_rate"/>
+                    android:icon="@drawable/ic_in_process"/>
 
                 <item android:title="Work Completed"
                     android:id="@+id/nav_driver_work_completed"
-                    android:icon="@drawable/ic_baseline_share_24"/>
+                    android:icon="@drawable/ic_work_completed"/>
             </menu>
         </item>
     </group>

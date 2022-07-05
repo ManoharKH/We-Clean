@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.github.mikephil.charting.animation.Easing;
@@ -47,8 +48,8 @@ public class PiechartActivity extends AppCompatActivity {
         calculateDifferentTypeofComplaints();
 
 
-//        getSupportActionBar().hide();
-//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+      getSupportActionBar().hide();
+      getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
     private void calculateDifferentTypeofComplaints() {
@@ -109,12 +110,26 @@ public class PiechartActivity extends AppCompatActivity {
         float complaintResolvedFloat = (float) complaintResolvedInt / (float) totalInt;
 
         ArrayList<PieEntry> entries = new ArrayList<>();
-        entries.add(new PieEntry(pendingComplaintFloat, "Pending Complaints"));
-        entries.add(new PieEntry(driverAddedFloat, "AddDrive to Complaint"));
-        entries.add(new PieEntry(workInProgressFloat, "WorkInProgress Complaint"));
-        entries.add(new PieEntry(workCompletedFloat, "WorkCompleted Complaints"));
-        entries.add(new PieEntry(complaintResolvedFloat, "Resolved Complaints"));
-
+        //if(pendingComplaintFloat>0)
+        //{
+            entries.add(new PieEntry(pendingComplaintFloat, "Pending Complaints"));
+        //}
+        //if(driverAddedFloat>0)
+        //{
+            entries.add(new PieEntry(driverAddedFloat, "AddDrive to Complaint"));
+        //}
+        //if(workInProgressFloat>0)
+        //{
+            entries.add(new PieEntry(workInProgressFloat, "WorkInProgress Complaint"));
+        //}
+        //if(workCompletedFloat>0)
+        //{
+            entries.add(new PieEntry(workCompletedFloat, "WorkCompleted Complaints"));
+        //}
+        //if(complaintResolvedFloat>0)
+        //{
+            entries.add(new PieEntry(complaintResolvedFloat, "Resolved Complaints"));
+        //}
         ArrayList<Integer> colors = new ArrayList<>();
         for (int color : ColorTemplate.MATERIAL_COLORS) {
             colors.add(color);

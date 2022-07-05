@@ -270,9 +270,7 @@ public class CleanAndUpdateByDriver extends AppCompatActivity {
 
             //Uri uri = Uri.parse("https://www.google.co.in/maps/dir/" +""+ "/" + sDestination);
 
-            Uri uri = Uri.parse("https://www.google.co.in/maps/dir/" +""+ "/" + laat+","+loog);
-
-
+            Uri uri = Uri.parse("https://www.google.co.in/maps/dir/" +""+ "/" + laat +","+loog );
 
             //float laat=Float.valueOf(latitude);
             //float loog=Float.valueOf(longitude);
