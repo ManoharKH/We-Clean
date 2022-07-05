@@ -220,6 +220,7 @@ public class AdminVerifyActivity extends AppCompatActivity {
                     map.put("address",address);
                     map.put("adminStatus",adminStatus);
                     map.put("citizenStatus",citizenStatus);
+                    map.put("driverStatus",driverStatus);
                     map.put("driverID",driverID);
                     map.put("lattitude",latitude);
                     map.put("longitude",longitude);
